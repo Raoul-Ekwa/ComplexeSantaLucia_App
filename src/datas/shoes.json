@@ -1,0 +1,182 @@
+[
+  {
+    "id": 0,
+    "name": "Ingo Joseph",
+    "image": [
+      "https://images.pexels.com/photos/609771/pexels-photo-609771.jpeg",
+      "https://images.pexels.com/photos/609771/pexels-photo-609771.jpeg",
+      "https://images.pexels.com/photos/609771/pexels-photo-609771.jpeg"
+    ],
+    "prix": 25000,
+    "modele": "Nike Air Max 2024",
+    "description": "Découvrez le confort ultime avec la Nike Air Max 2024, parfaite pour le sport et les sorties décontractées."
+  },
+  {
+    "id": 1,
+    "name": "Mnz",
+    "image": [
+      "https://images.pexels.com/photos/1598508/pexels-photo-1598508.jpeg",
+      "https://images.pexels.com/photos/1598508/pexels-photo-1598508.jpeg",
+      "https://images.pexels.com/photos/1598508/pexels-photo-1598508.jpeg"
+    ],
+    "prix": 30000,
+    "modele": "Adidas UltraBoost",
+    "description": "La performance rencontre le style avec l'Adidas UltraBoost, idéale pour vos entraînements intensifs."
+  },
+  {
+    "id": 2,
+    "name": "Zain Ali",
+    "image": [
+      "https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg",
+      "https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg",
+      "https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg"
+    ],
+    "prix": 20000,
+    "modele": "Puma Future Rider",
+    "description": "Ajoutez une touche rétro à votre garde-robe avec la Puma Future Rider, un mélange de confort et de style."
+  },
+  {
+    "id": 3,
+    "name": "Lil Artsy",
+    "image": [
+      "https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg",
+      "https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg",
+      "https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg"
+    ],
+    "prix": 35000,
+    "modele": "Dr. Martens 1460",
+    "description": "Exprimez votre personnalité avec les emblématiques Dr. Martens 1460, conçues pour durer."
+  },
+  {
+    "id": 4,
+    "name": "Diana Fouda",
+    "image": [
+      "https://images.pexels.com/photos/1335463/pexels-photo-1335463.jpeg",
+      "https://images.pexels.com/photos/1335463/pexels-photo-1335463.jpeg",
+      "https://images.pexels.com/photos/1335463/pexels-photo-1335463.jpeg"
+    ],
+    "prix": 22000,
+    "modele": "Vans Old Skool",
+    "description": "Un classique indémodable, la Vans Old Skool allie simplicité et élégance décontractée."
+  },
+  {
+    "id": 5,
+    "name": "Ray Piedra",
+    "image": [
+      "https://images.pexels.com/photos/1478442/pexels-photo-1478442.jpeg",
+      "https://images.pexels.com/photos/1478442/pexels-photo-1478442.jpeg",
+      "https://images.pexels.com/photos/1478442/pexels-photo-1478442.jpeg"
+    ],
+    "prix": 28000,
+    "modele": "Nike SB Stefan Janoski",
+    "description": "Explorez un style décontracté avec les Nike SB Stefan Janoski, parfaites pour le skate ou la détente."
+  },
+  {
+    "id": 6,
+    "name": "Snack Toronto",
+    "image": [
+      "https://images.pexels.com/photos/1630344/pexels-photo-1630344.jpeg",
+      "https://images.pexels.com/photos/1630344/pexels-photo-1630344.jpeg",
+      "https://images.pexels.com/photos/1630344/pexels-photo-1630344.jpeg"
+    ],
+    "prix": 32000,
+    "modele": "Balenciaga Triple S",
+    "description": "Faites une déclaration audacieuse avec les Balenciaga Triple S, un choix iconique pour les passionnés de mode."
+  },
+  {
+    "id": 7,
+    "name": "Lukas",
+    "image": [
+      "https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg",
+      "https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg",
+      "https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg"
+    ],
+    "prix": 18000,
+    "modele": "Timberland PRO",
+    "description": "Alliez durabilité et confort avec les Timberland PRO, conçues pour les environnements exigeants."
+  },
+  {
+    "id": 8,
+    "name": "Emma Miller",
+    "image": [
+      "https://images.pexels.com/photos/2562992/pexels-photo-2562992.png",
+      "https://images.pexels.com/photos/2562992/pexels-photo-2562992.png",
+      "https://images.pexels.com/photos/2562992/pexels-photo-2562992.png"
+    ],
+    "prix": 15000,
+    "modele": "Converse Chuck Taylor",
+    "description": "Les Converse Chuck Taylor sont un incontournable intemporel pour un look décontracté et stylé."
+  },
+  {
+    "id": 9,
+    "name": "John Doe",
+    "image": [
+      "https://images.pexels.com/photos/6594253/pexels-photo-6594253.jpeg",
+      "https://images.pexels.com/photos/6594253/pexels-photo-6594253.jpeg",
+      "https://images.pexels.com/photos/6594253/pexels-photo-6594253.jpeg"
+    ],
+    "prix": 40000,
+    "modele": "Gucci Ace",
+    "description": "Apportez une touche de luxe à votre collection avec les élégantes Gucci Ace."
+  },
+  {
+    "id": 10,
+    "name": "Sophia Li",
+    "image": [
+      "https://images.pexels.com/photos/5730956/pexels-photo-5730956.jpeg",
+      "https://images.pexels.com/photos/5730956/pexels-photo-5730956.jpeg",
+      "https://images.pexels.com/photos/5730956/pexels-photo-5730956.jpeg"
+    ],
+    "prix": 27000,
+    "modele": "Reebok Classic Leather",
+    "description": "Un style intemporel avec les Reebok Classic Leather, parfaites pour toute occasion."
+  },
+  {
+    "id": 11,
+    "name": "Mark Davis",
+    "image": [
+      "https://images.pexels.com/photos/6153367/pexels-photo-6153367.jpeg",
+      "https://images.pexels.com/photos/6153367/pexels-photo-6153367.jpeg",
+      "https://images.pexels.com/photos/6153367/pexels-photo-6153367.jpeg"
+    ],
+    "prix": 32000,
+    "modele": "New Balance 990v5",
+    "description": "Profitez d'un confort exceptionnel avec les New Balance 990v5, idéales pour le quotidien."
+  },
+  {
+    "id": 12,
+    "name": "Olivia Brown",
+    "image": [
+      "https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg",
+      "https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg",
+      "https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg"
+    ],
+    "prix": 25000,
+    "modele": "Asics Gel-Lyte III",
+    "description": "Les Asics Gel-Lyte III offrent un design innovant et un confort inégalé, parfaits pour les amateurs de sneakers modernes."
+  },
+  {
+    "id": 13,
+    "name": "James Smith",
+    "image": [
+      "https://images.pexels.com/photos/19090/pexels-photo.jpg",
+      "https://images.pexels.com/photos/19090/pexels-photo.jpg",
+      "https://images.pexels.com/photos/19090/pexels-photo.jpg"
+    ],
+    "prix": 22000,
+    "modele": "Fila Disruptor II",
+    "description": "Ajoutez une touche rétro à votre look avec les Fila Disruptor II, des chaussures robustes et stylées."
+  },
+  {
+    "id": 14,
+    "name": "Jessica White",
+    "image": [
+      "https://images.pexels.com/photos/6078337/pexels-photo-6078337.jpeg",
+      "https://images.pexels.com/photos/6078337/pexels-photo-6078337.jpeg",
+      "https://images.pexels.com/photos/6078337/pexels-photo-6078337.jpeg"
+    ],
+    "prix": 36000,
+    "modele": "Nike Air Force 1",
+    "description": "Les Nike Air Force 1 combinent confort et design élégant, parfaites pour un usage quotidien."
+  }
+]

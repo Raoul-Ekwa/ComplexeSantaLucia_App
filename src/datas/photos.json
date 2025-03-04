@@ -1,0 +1,122 @@
+[
+  {
+    "id": 15,
+    "name": "FRANKYDEE",
+    "image": [
+      "https://images.pexels.com/photos/776908/pexels-photo-776908.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/776908/pexels-photo-776908.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/776908/pexels-photo-776908.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    ],
+    "modele": "Canon EOS 5D Mark IV",
+    "prix": 135000,
+    "description": "Le Canon EOS 5D Mark IV est un appareil photo plein format offrant une qualité d'image exceptionnelle et des fonctionnalités avancées pour les professionnels."
+  },
+  {
+    "id": 16,
+    "name": "Bruno Massao",
+    "image": [
+      "https://images.pexels.com/photos/2378079/pexels-photo-2378079.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/2378079/pexels-photo-2378079.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/2378079/pexels-photo-2378079.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    ],
+    "modele": "Nikon D850",
+    "prix": 145500,
+    "description": "Le Nikon D850 allie performance, résolution et rapidité, idéal pour les photographes exigeants."
+  },
+  {
+    "id": 17,
+    "name": "Gül Işık",
+    "image": [
+      "https://images.pexels.com/photos/2295393/pexels-photo-2295393.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/2295393/pexels-photo-2295393.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/2295393/pexels-photo-2295393.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    ],
+    "modele": "Sony Alpha A7 III",
+    "prix": 120000,
+    "description": "Le Sony Alpha A7 III est un appareil hybride plein format offrant une performance polyvalente et une excellente qualité vidéo."
+  },
+  {
+    "id": 18,
+    "name": "Tima Miroshnichenko",
+    "image": [
+      "https://images.pexels.com/photos/7205899/pexels-photo-7205899.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/7205899/pexels-photo-7205899.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/7205899/pexels-photo-7205899.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    ],
+    "modele": "Fujifilm X-T4",
+    "prix": 125000,
+    "description": "Le Fujifilm X-T4 est un appareil photo hybride compact et puissant, conçu pour les créateurs de contenu."
+  },
+  {
+    "id": 19,
+    "name": "Jill Burrow",
+    "image": [
+      "https://images.pexels.com/photos/6858618/pexels-photo-6858618.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/6858618/pexels-photo-6858618.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/6858618/pexels-photo-6858618.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    ],
+    "modele": "Olympus OM-D E-M1 Mark III",
+    "prix": 110000,
+    "description": "L'Olympus OM-D E-M1 Mark III est idéal pour la photographie de voyage et la capture d'images dynamiques."
+  },
+  {
+    "id": 20,
+    "name": "Askar Abayev",
+    "image": [
+      "https://images.pexels.com/photos/5638701/pexels-photo-5638701.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/5638701/pexels-photo-5638701.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/5638701/pexels-photo-5638701.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    ],
+    "modele": "Panasonic Lumix GH5",
+    "prix": 119000,
+    "description": "Le Panasonic Lumix GH5 est parfait pour la création vidéo avec des fonctionnalités avancées et une qualité 4K exceptionnelle."
+  },
+  {
+    "id": 21,
+    "name": "Tima Miroshnichenko",
+    "image": [
+      "https://images.pexels.com/photos/7205937/pexels-photo-7205937.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/7205937/pexels-photo-7205937.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/7205937/pexels-photo-7205937.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    ],
+    "modele": "Leica M10",
+    "prix": 180000,
+    "description": "Le Leica M10 est un appareil photo emblématique, offrant une qualité d'image et un design minimaliste intemporels."
+  },
+  {
+    "id": 22,
+    "name": "Vlad Chețan",
+    "image": [
+      "https://images.pexels.com/photos/7990475/pexels-photo-7990475.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/7990475/pexels-photo-7990475.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/7990475/pexels-photo-7990475.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    ],
+    "modele": "Canon EOS R5",
+    "prix": 195000,
+    "description": "Le Canon EOS R5 combine des fonctionnalités de pointe et une qualité d'image exceptionnelle pour les professionnels."
+  },
+  {
+    "id": 23,
+    "name": "Nina Uhlíková",
+    "image": [
+      "https://images.pexels.com/photos/6617577/pexels-photo-6617577.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/6617577/pexels-photo-6617577.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/6617577/pexels-photo-6617577.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    ],
+    "modele": "Nikon Z7 II",
+    "prix": 170000,
+    "description": "Le Nikon Z7 II offre une résolution exceptionnelle et des performances fluides pour les photographes créatifs."
+  },
+  {
+    "id": 24,
+    "name": "Humbert Jürgens",
+    "image": [
+      "https://images.pexels.com/photos/2073622/pexels-photo-2073622.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/2073622/pexels-photo-2073622.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "https://images.pexels.com/photos/2073622/pexels-photo-2073622.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    ],
+    "modele": "Sony Cyber-shot RX100 VII",
+    "prix": 105000,
+    "description": "Le Sony Cyber-shot RX100 VII est un appareil compact premium avec une excellente qualité d'image et des capacités vidéo avancées."
+  }
+]
