@@ -6,16 +6,26 @@ import {
   TextInput,
   View,
   TouchableOpacity,
+  KeyboardAvoidingView,
+  Platform,
+  Alert,
 } from 'react-native';
-import React, {useState} from 'react';
-import {COLORS, SHADOWS, SIZES} from '../../constants/theme';
+import React, { useState } from 'react';
+import { COLORS, SHADOWS, SIZES } from '../../constants/theme';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {Picker} from '@react-native-picker/picker'; // Import du Picker
+import { Picker } from '@react-native-picker/picker'; // Import du Picker
+import MyButton from '../../components/MyButton';
+import { useNavigation } from '@react-navigation/native'; // Import de la navigation
 
 const SignUpScreen = () => {
+  const navigation = useNavigation();
+
   const [isChecked, setIsChecked] = useState(false); // État de la case à cocher
   const [showPassword, setShowPassword] = useState(false); // État pour afficher/masquer le mot de passe
   const [selectedCountry, setSelectedCountry] = useState(''); // État pour le pays sélectionné
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
 
   // Fonction pour changer l'état de la checkbox
   const toggleCheckbox = () => {
@@ -27,8 +37,25 @@ const SignUpScreen = () => {
     setShowPassword(!showPassword);
   };
 
+  // Fonction de soumission du formulaire
+  const handleSubmit = () => {
+    if (!name || !email || !phone || !selectedCountry) {
+      Alert.alert('Validation Error', 'Please fill in all fields and select a country.');
+      return;
+    }
+    if (!isChecked) {
+      Alert.alert('Terms and Conditions', 'Please accept the terms and conditions.');
+      return;
+    }
+    // Affichons les donnees saisies du formulaire dans la console 
+    console.log('Form submitted', { name, email, phone, selectedCountry });
+  };
+
   return (
-    <>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={styles.container}
+    >
       <View style={styles.container}>
         <View>
           <Image
@@ -38,10 +65,10 @@ const SignUpScreen = () => {
         </View>
       </View>
       <View style={styles.signUpwrapper}>
-        <Text style={{fontWeight: 'bold', fontSize: SIZES.xLarge}}>
+        <Text style={{ fontWeight: 'bold', fontSize: SIZES.xLarge }}>
           Create new
         </Text>
-        <Text style={{fontWeight: 'bold', fontSize: SIZES.xLarge}}>
+        <Text style={{ fontWeight: 'bold', fontSize: SIZES.xLarge }}>
           Account.
         </Text>
 
@@ -52,7 +79,12 @@ const SignUpScreen = () => {
             color={COLORS.primary}
             style={styles.icon}
           />
-          <TextInput placeholder="Nom" style={styles.input} />
+          <TextInput
+            placeholder="Nom"
+            style={styles.input}
+            value={name}
+            onChangeText={setName}
+          />
         </View>
 
         <View style={styles.iconwrapper}>
@@ -62,7 +94,13 @@ const SignUpScreen = () => {
             color={COLORS.primary}
             style={styles.icon}
           />
-          <TextInput placeholder="Email" style={styles.input} />
+          <TextInput
+            placeholder="Email"
+            style={styles.input}
+            value={email}
+            onChangeText={setEmail}
+            keyboardType="email-address"
+          />
         </View>
 
         <View style={styles.iconwrapper}>
@@ -72,28 +110,28 @@ const SignUpScreen = () => {
             color={COLORS.primary}
             style={styles.icon}
           />
-          <TextInput placeholder="Telephone" style={styles.input} />
+          <TextInput
+            placeholder="Telephone"
+            style={styles.input}
+            value={phone}
+            onChangeText={setPhone}
+            keyboardType="phone-pad"
+          />
         </View>
 
         {/* Picker pour la sélection du pays */}
         <View style={styles.iconwrapper}>
-          <Ionicons
-            name="flag"
-            size={20}
-            color={COLORS.primary}
-            style={styles.icon}
-          />
           <Picker
             selectedValue={selectedCountry}
             onValueChange={itemValue => setSelectedCountry(itemValue)}
-            style={styles.input}>
+            style={styles.input}
+          >
             <Picker.Item label="Select Country" value="" />
             <Picker.Item label="United States" value="US" />
             <Picker.Item label="Canada" value="CA" />
             <Picker.Item label="France" value="FR" />
             <Picker.Item label="Germany" value="DE" />
             <Picker.Item label="India" value="IN" />
-            {/* Ajoutez plus de pays ici */}
           </Picker>
         </View>
 
@@ -112,7 +150,8 @@ const SignUpScreen = () => {
           />
           <TouchableOpacity
             onPress={togglePasswordVisibility}
-            style={styles.eyeIconWrapper}>
+            style={styles.eyeIconWrapper}
+          >
             <Ionicons
               name={showPassword ? 'eye' : 'eye-off'}
               size={20}
@@ -126,24 +165,39 @@ const SignUpScreen = () => {
           <View style={styles.bottomText}>
             <TouchableOpacity
               onPress={toggleCheckbox}
-              style={styles.checkboxWrapper}>
+              style={styles.checkboxWrapper}
+            >
               <Ionicons
-                name={isChecked ? 'checkbox-outline' : 'checkbox'} // Changez l'icône selon l'état
+                name={isChecked ? 'checkbox-outline' : 'checkbox'}
                 size={20}
-                color={isChecked ? COLORS.primary : '#4E55AF'}
+                color={isChecked ? COLORS.primary : COLORS.blue}
               />
             </TouchableOpacity>
           </View>
 
           <View style={styles.bottomText}>
-            <Text style={{color: COLORS.gray, fontSize: SIZES.small}}>
+            <Text style={{ color: COLORS.gray2, fontSize: SIZES.small }}>
               By registering you have accepted to use the{' '}
             </Text>
-            <Text style={{color: '#00D2E0', fontSize: SIZES.small}}>terms</Text>
+            <Text style={{ color: '#00D2E0', fontSize: SIZES.small }}>
+              terms
+            </Text>
           </View>
         </View>
+        <MyButton title="Create account" onPress={handleSubmit} />
       </View>
-    </>
+
+      <View style={styles.signInText}>
+        <Text style={{ color: COLORS.gray2, fontSize: SIZES.small }}>
+          I already have an account.
+        </Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+          <Text style={{ color: COLORS.lightBlue, fontSize: SIZES.small }}>
+            Sign in
+          </Text>
+        </TouchableOpacity>
+      </View>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -175,6 +229,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 5,
     padding: 15,
+    color: COLORS.blue,
   },
   iconwrapper: {
     flexDirection: 'row',
@@ -200,4 +255,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 10,
   },
+  signInText: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+    marginRight: 45,
+  },
 });
+

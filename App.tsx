@@ -1,15 +1,15 @@
-import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import SignUpScreen from './src/Screens/auth/SignUpScreen';
+import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native'; // Assurez-vous d'importer NavigationContainer
+import StackNavigator from './src/navigation/StackNavigator'; // Importez votre StackNavigator
 
 const App = () => {
   return (
-    <SafeAreaView >
-      <StatusBar
-        barStyle="dark-content"
-        backgroundColor="lightgreen" 
-      />
-      <SignUpScreen />
+    <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="dark-content" backgroundColor="lightgreen" />
+      <NavigationContainer>
+        <StackNavigator />
+      </NavigationContainer>
     </SafeAreaView>
   );
 };
@@ -17,5 +17,9 @@ const App = () => {
 export default App;
 
 const styles = StyleSheet.create({
- 
+  container: {
+    flex: 1, 
+    backgroundColor: '#f7f7f7',
+  },
 });
+
