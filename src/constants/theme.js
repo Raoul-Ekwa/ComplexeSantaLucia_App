@@ -12,7 +12,7 @@ const COLORS = {
 
   offwhite: "#F3F4F8",
   white: "#FFFFFF",
-  black: "#000000",
+  black: "#0D0F23",
   red: "#e81e4d",
   green: "#00C135",
   lightWhite: "#FAFAFC",

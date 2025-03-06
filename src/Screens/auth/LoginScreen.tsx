@@ -14,7 +14,7 @@ import {COLORS, SHADOWS, SIZES} from '../../constants/theme';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MyButton from '../../components/MyButton';
 import {useNavigation} from '@react-navigation/native'; // Import de la navigation
-
+import { Fonts} from "../../styles/fonts"
 const LoginScreen = () => {
   const navigation = useNavigation();
 
@@ -54,10 +54,10 @@ const LoginScreen = () => {
         </View>
       </View>
       <View style={styles.signUpwrapper}>
-        <Text style={{fontWeight: 'bold', fontSize: SIZES.xLarge}}>
+        <Text style={{fontFamily: Fonts.SemiBold, fontSize: SIZES.xLarge}}>
           Sign in
         </Text>
-        <Text style={{fontWeight: 'bold', fontSize: SIZES.xLarge}}>
+        <Text style={{fontFamily: Fonts.Medium, fontSize: SIZES.xLarge}}>
           to continue.
         </Text>
 
@@ -118,21 +118,21 @@ const LoginScreen = () => {
 
         {/* Section pour les termes et conditions avec la checkbox */}
         <View style={styles.bottomTextContainer}>
-          <View style={styles.bottomText}>
-            <Text style={{color: '#00D2E0', fontSize: SIZES.small}}>
+          <TouchableOpacity style={styles.bottomText} onPress={() => navigation.navigate("ForgetPassword")}>
+            <Text style={{ fontFamily: Fonts.Regular, color: '#00D2E0', fontSize: SIZES.small}}>
               Forget Password
             </Text>
-          </View>
+          </TouchableOpacity>
         </View>
         <MyButton title="Log in" onPress={handleSubmit} style={styles.button}/>
       </View>
 
       <View style={styles.signInText}>
-        <Text style={{color: COLORS.gray2, fontSize: SIZES.small}}>
+        <Text style={{ fontFamily: Fonts.Regular, color: COLORS.gray2, fontSize: SIZES.small}}>
           Don't have an account.
         </Text>
         <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
-          <Text style={{color: COLORS.lightBlue, fontSize: SIZES.small}}>
+          <Text style={{ fontFamily: Fonts.Regular, color: COLORS.lightBlue, fontSize: SIZES.small}}>
             Create new account
           </Text>
         </TouchableOpacity>
@@ -145,6 +145,7 @@ export default LoginScreen;
 
 const styles = StyleSheet.create({
   container: {
+    //flex: 1,
     backgroundColor: '#f7f7f7',
     alignItems: 'center',
     justifyContent: 'center',
@@ -170,6 +171,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 15,
     color: COLORS.blue,
+    fontFamily: Fonts.Regular,
   },
   iconwrapper: {
     flexDirection: 'row',
@@ -206,6 +208,7 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 40,
+    fontFamily: Fonts.Regular,
   },
   
 });

@@ -1,15 +1,10 @@
 export const Fonts = {
-   Bold : " TitilliumWeb-Bold",
-   Light : "TitilliumWeb-Light",
-   Regular : "TitilliumWeb-Regular",
-   SemiBold : "TitilliumWeb-SemiBold",
-   Black : "TitilliumWeb-Black",
-   BoldItalic : "TitilliumWeb-BoldItalic",
-   ExtraLight : "TitilliumWeb-ExtraLight",
-   ExtraLightItalic : "TitilliumWeb-ExtraLightItalic",
-   Italic : "TitilliumWeb-Italic",
-   LightItalic : "TitilliumWeb-LightItalic",
-   SemiBoldItalic : "TitilliumWeb-SemiBoldItalic"
+   Bold : "Quicksand-Bold",
+   Light :  " Quicksand-Light",
+   Regular :  "Quicksand-Regular",
+   SemiBold :  "Quicksand-SemiBold",
+   Medium :  "Quicksand-Medium",
+   
 } as const;
 
 export type FontName = keyof typeof Fonts;

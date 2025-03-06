@@ -11,12 +11,12 @@ import {
   Alert,
 } from 'react-native';
 import React, { useState } from 'react';
-import { COLORS, SHADOWS, SIZES } from '../../constants/theme';
+import { COLORS, SHADOWS, SIZES, } from '../../constants/theme';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Picker } from '@react-native-picker/picker'; // Import du Picker
 import MyButton from '../../components/MyButton';
 import { useNavigation } from '@react-navigation/native'; // Import de la navigation
-
+import { Fonts } from '../../styles/fonts';
 const SignUpScreen = () => {
   const navigation = useNavigation();
 
@@ -65,10 +65,10 @@ const SignUpScreen = () => {
         </View>
       </View>
       <View style={styles.signUpwrapper}>
-        <Text style={{ fontWeight: 'bold', fontSize: SIZES.xLarge }}>
+        <Text style={{ fontSize: SIZES.xLarge, fontFamily:Fonts.SemiBold  }}>
           Create new
         </Text>
-        <Text style={{ fontWeight: 'bold', fontSize: SIZES.xLarge }}>
+        <Text style={{  fontSize: SIZES.xLarge, fontFamily: Fonts.Medium}}>
           Account.
         </Text>
 
@@ -176,10 +176,10 @@ const SignUpScreen = () => {
           </View>
 
           <View style={styles.bottomText}>
-            <Text style={{ color: COLORS.gray2, fontSize: SIZES.small }}>
+            <Text style={{  fontFamily: Fonts.Regular,color: COLORS.gray2, fontSize: SIZES.small }}>
               By registering you have accepted to use the{' '}
             </Text>
-            <Text style={{ color: '#00D2E0', fontSize: SIZES.small }}>
+            <Text style={{  fontFamily: Fonts.Regular, color: '#00D2E0', fontSize: SIZES.small }}>
               terms
             </Text>
           </View>
@@ -188,11 +188,11 @@ const SignUpScreen = () => {
       </View>
 
       <View style={styles.signInText}>
-        <Text style={{ color: COLORS.gray2, fontSize: SIZES.small }}>
+        <Text style={{  fontFamily: Fonts.Regular, color: COLORS.gray2, fontSize: SIZES.small }}>
           I already have an account.
         </Text>
         <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-          <Text style={{ color: COLORS.lightBlue, fontSize: SIZES.small }}>
+          <Text style={{  fontFamily: Fonts.Regular, color: COLORS.lightBlue, fontSize: SIZES.small }}>
             Sign in
           </Text>
         </TouchableOpacity>
@@ -205,6 +205,7 @@ export default SignUpScreen;
 
 const styles = StyleSheet.create({
   container: {
+
     backgroundColor: '#f7f7f7',
     alignItems: 'center',
     justifyContent: 'center',
@@ -229,7 +230,8 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 5,
     padding: 15,
-    color: COLORS.blue,
+    color: COLORS.black,
+    fontFamily: Fonts.Regular,
   },
   iconwrapper: {
     flexDirection: 'row',

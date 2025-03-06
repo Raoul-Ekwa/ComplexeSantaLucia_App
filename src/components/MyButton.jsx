@@ -1,37 +1,33 @@
+
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import React, { FC } from 'react'
+
 import { COLORS } from '../constants/theme'
+import { Fonts } from '../styles/fonts';
 
+const MyButton = ({ title, style, onPress }) => {
 
-interface Props {
-    title: string;
-} 
-const MyButton : FC<Props>  = ({ title, onPress }) => {
   return (
-    <TouchableOpacity style={styles.container}  onPress={onPress}>
-      <Text style={styles.titleText}>{title}</Text>
+    <TouchableOpacity style={[styles.defaultButtonStyle, style]} onPress={onPress}>
+      <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
-  )
-}
-
-export default MyButton
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-      backgroundColor: COLORS.blueButton,
-      borderRadius: 10,
-      height: 50,
-      width: "100%",
-      justifyContent: 'center',
-      alignItems: 'center',
-      paddingHorizontal: 20,
-      marginTop: 20,
+  defaultButtonStyle: {
+    marginTop: 20,
+    backgroundColor: COLORS.blueButton,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 5,
+    padding: 10,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontFamily: Fonts.SemiBold,
+  },
+});
 
-    },
-    titleText: {
-        //fontFamily: "Redressed-Regular",
-        color: 'white',
-        fontSize: 16,
-    },
-  
-})
+export default MyButton;
