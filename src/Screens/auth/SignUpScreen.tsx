@@ -1,6 +1,5 @@
 import {
   Image,
-  SafeAreaView,
   StyleSheet,
   Text,
   TextInput,
@@ -9,14 +8,16 @@ import {
   KeyboardAvoidingView,
   Platform,
   Alert,
+  ScrollView, // Importation de ScrollView
 } from 'react-native';
 import React, { useState } from 'react';
-import { COLORS, SHADOWS, SIZES, } from '../../constants/theme';
+import { COLORS, SHADOWS, SIZES } from '../../constants/theme';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Picker } from '@react-native-picker/picker'; // Import du Picker
 import MyButton from '../../components/MyButton';
 import { useNavigation } from '@react-navigation/native'; // Import de la navigation
 import { Fonts } from '../../styles/fonts';
+
 const SignUpScreen = () => {
   const navigation = useNavigation();
 
@@ -56,147 +57,149 @@ const SignUpScreen = () => {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={styles.container}
     >
-      <View style={styles.container}>
-        <View>
-          <Image
-            source={require('../../assets/images/logo_santa_lucia.png')}
-            style={styles.logo}
-          />
+      <ScrollView contentContainerStyle={styles.scrollViewContainer}> 
+        <View style={styles.container}>
+          <View>
+            <Image
+              source={require('../../assets/images/logo_santa_lucia.png')}
+              style={styles.logo}
+            />
+          </View>
         </View>
-      </View>
-      <View style={styles.signUpwrapper}>
-        <Text style={{ fontSize: SIZES.xLarge, fontFamily:Fonts.SemiBold  }}>
-          Create new
-        </Text>
-        <Text style={{  fontSize: SIZES.xLarge, fontFamily: Fonts.Medium}}>
-          Account.
-        </Text>
+        <View style={styles.signUpwrapper}>
+          <Text style={{ fontSize: SIZES.xLarge, fontFamily: Fonts.SemiBold }}>
+            Create new
+          </Text>
+          <Text style={{ fontSize: SIZES.xLarge, fontFamily: Fonts.Medium }}>
+            Account.
+          </Text>
 
-        <View style={styles.iconwrapper}>
-          <Ionicons
-            name="person"
-            size={20}
-            color={COLORS.primary}
-            style={styles.icon}
-          />
-          <TextInput
-            placeholder="Nom"
-            style={styles.input}
-            value={name}
-            onChangeText={setName}
-          />
-        </View>
-
-        <View style={styles.iconwrapper}>
-          <Ionicons
-            name="mail"
-            size={20}
-            color={COLORS.primary}
-            style={styles.icon}
-          />
-          <TextInput
-            placeholder="Email"
-            style={styles.input}
-            value={email}
-            onChangeText={setEmail}
-            keyboardType="email-address"
-          />
-        </View>
-
-        <View style={styles.iconwrapper}>
-          <Ionicons
-            name="call"
-            size={20}
-            color={COLORS.primary}
-            style={styles.icon}
-          />
-          <TextInput
-            placeholder="Telephone"
-            style={styles.input}
-            value={phone}
-            onChangeText={setPhone}
-            keyboardType="phone-pad"
-          />
-        </View>
-
-        {/* Picker pour la sélection du pays */}
-        <View style={styles.iconwrapper}>
-          <Picker
-            selectedValue={selectedCountry}
-            onValueChange={itemValue => setSelectedCountry(itemValue)}
-            style={styles.input}
-          >
-            <Picker.Item label="Select Country" value="" />
-            <Picker.Item label="United States" value="US" />
-            <Picker.Item label="Canada" value="CA" />
-            <Picker.Item label="France" value="FR" />
-            <Picker.Item label="Germany" value="DE" />
-            <Picker.Item label="India" value="IN" />
-          </Picker>
-        </View>
-
-        {/* Input pour le mot de passe avec icône pour masquer/afficher */}
-        <View style={styles.iconwrapper}>
-          <Ionicons
-            name="lock-closed"
-            size={20}
-            color={COLORS.primary}
-            style={styles.icon}
-          />
-          <TextInput
-            placeholder="Mot de passe"
-            style={styles.input}
-            secureTextEntry={!showPassword} // Change selon l'état showPassword
-          />
-          <TouchableOpacity
-            onPress={togglePasswordVisibility}
-            style={styles.eyeIconWrapper}
-          >
+          <View style={styles.iconwrapper}>
             <Ionicons
-              name={showPassword ? 'eye' : 'eye-off'}
+              name="person"
               size={20}
               color={COLORS.primary}
+              style={styles.icon}
             />
-          </TouchableOpacity>
-        </View>
+            <TextInput
+              placeholder="Nom"
+              style={styles.input}
+              value={name}
+              onChangeText={setName}
+            />
+          </View>
 
-        {/* Section pour les termes et conditions avec la checkbox */}
-        <View style={styles.bottomTextContainer}>
-          <View style={styles.bottomText}>
+          <View style={styles.iconwrapper}>
+            <Ionicons
+              name="mail"
+              size={20}
+              color={COLORS.primary}
+              style={styles.icon}
+            />
+            <TextInput
+              placeholder="Email"
+              style={styles.input}
+              value={email}
+              onChangeText={setEmail}
+              keyboardType="email-address"
+            />
+          </View>
+
+          <View style={styles.iconwrapper}>
+            <Ionicons
+              name="call"
+              size={20}
+              color={COLORS.primary}
+              style={styles.icon}
+            />
+            <TextInput
+              placeholder="Telephone"
+              style={styles.input}
+              value={phone}
+              onChangeText={setPhone}
+              keyboardType="phone-pad"
+            />
+          </View>
+
+          {/* Picker pour la sélection du pays */}
+          <View style={styles.iconwrapper}>
+            <Picker
+              selectedValue={selectedCountry}
+              onValueChange={itemValue => setSelectedCountry(itemValue)}
+              style={styles.input}
+            >
+              <Picker.Item label="Select Country" value="" />
+              <Picker.Item label="United States" value="US" />
+              <Picker.Item label="Canada" value="CA" />
+              <Picker.Item label="France" value="FR" />
+              <Picker.Item label="Germany" value="DE" />
+              <Picker.Item label="India" value="IN" />
+            </Picker>
+          </View>
+
+          {/* Input pour le mot de passe avec icône pour masquer/afficher */}
+          <View style={styles.iconwrapper}>
+            <Ionicons
+              name="lock-closed"
+              size={20}
+              color={COLORS.primary}
+              style={styles.icon}
+            />
+            <TextInput
+              placeholder="Mot de passe"
+              style={styles.input}
+              secureTextEntry={!showPassword} // Change selon l'état showPassword
+            />
             <TouchableOpacity
-              onPress={toggleCheckbox}
-              style={styles.checkboxWrapper}
+              onPress={togglePasswordVisibility}
+              style={styles.eyeIconWrapper}
             >
               <Ionicons
-                name={isChecked ? 'checkbox-outline' : 'checkbox'}
+                name={showPassword ? 'eye' : 'eye-off'}
                 size={20}
-                color={isChecked ? COLORS.primary : COLORS.blue}
+                color={COLORS.primary}
               />
             </TouchableOpacity>
           </View>
 
-          <View style={styles.bottomText}>
-            <Text style={{  fontFamily: Fonts.Regular,color: COLORS.gray2, fontSize: SIZES.small }}>
-              By registering you have accepted to use the{' '}
-            </Text>
-            <Text style={{  fontFamily: Fonts.Regular, color: '#00D2E0', fontSize: SIZES.small }}>
-              terms
-            </Text>
-          </View>
-        </View>
-        <MyButton title="Create account" onPress={handleSubmit} />
-      </View>
+          {/* Section pour les termes et conditions avec la checkbox */}
+          <View style={styles.bottomTextContainer}>
+            <View style={styles.bottomText}>
+              <TouchableOpacity
+                onPress={toggleCheckbox}
+                style={styles.checkboxWrapper}
+              >
+                <Ionicons
+                  name={isChecked ? 'checkbox-outline' : 'checkbox'}
+                  size={20}
+                  color={isChecked ? COLORS.primary : COLORS.blue}
+                />
+              </TouchableOpacity>
+            </View>
 
-      <View style={styles.signInText}>
-        <Text style={{  fontFamily: Fonts.Regular, color: COLORS.gray2, fontSize: SIZES.small }}>
-          I already have an account.
-        </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-          <Text style={{  fontFamily: Fonts.Regular, color: COLORS.lightBlue, fontSize: SIZES.small }}>
-            Sign in
+            <View style={styles.bottomText}>
+              <Text style={{ fontFamily: Fonts.Regular, color: COLORS.gray2, fontSize: SIZES.small }}>
+                By registering you have accepted to use the{' '}
+              </Text>
+              <Text style={{ fontFamily: Fonts.Regular, color: '#00D2E0', fontSize: SIZES.small }}>
+                terms
+              </Text>
+            </View>
+          </View>
+          <MyButton title="Create account" onPress={handleSubmit} />
+        </View>
+
+        <View style={styles.signInText}>
+          <Text style={{ fontFamily: Fonts.Regular, color: COLORS.gray2, fontSize: SIZES.small }}>
+            I already have an account.
           </Text>
-        </TouchableOpacity>
-      </View>
+          <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+            <Text style={{ fontFamily: Fonts.Regular, color: COLORS.lightBlue, fontSize: SIZES.small }}>
+              Sign in
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
     </KeyboardAvoidingView>
   );
 };
@@ -205,15 +208,19 @@ export default SignUpScreen;
 
 const styles = StyleSheet.create({
   container: {
-
     backgroundColor: '#f7f7f7',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  scrollViewContainer: {
+    flexGrow: 1, 
+    justifyContent: 'center', 
   },
   logo: {
     width: 200,
     height: 100,
     resizeMode: 'contain',
+    marginTop: 10,
   },
   signUpwrapper: {
     width: '90%',
@@ -265,4 +272,14 @@ const styles = StyleSheet.create({
     marginRight: 45,
   },
 });
+
+
+
+
+
+
+
+
+
+
 

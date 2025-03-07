@@ -154,6 +154,7 @@ const styles = StyleSheet.create({
     width: 200,
     height: 100,
     resizeMode: 'contain',
+    marginTop:15
   },
   signUpwrapper: {
     width: '90%',
