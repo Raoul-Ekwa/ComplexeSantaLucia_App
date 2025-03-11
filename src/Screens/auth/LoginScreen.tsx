@@ -35,6 +35,10 @@ const LoginScreen = () => {
         'Please fill in all fields and select a country.',
       );
       return;
+    } else  {
+      // Si le formulaire est valide, naviguer vers la page suivante
+      navigation.navigate('HomePage');
+    
     }
 
     // Affichons les donnees saisies du formulaire dans la console

@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   scrollViewContainer: {
-    flexGrow: 1, 
+    //flexGrow: 1, 
     justifyContent: 'center', 
   },
   logo: {
@@ -227,9 +227,9 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     borderRadius: 5,
     padding: 25,
-    marginVertical: 20,
+    marginVertical: SIZES.large,
     ...SHADOWS.small,
-    marginHorizontal: SIZES.xLarge,
+    marginHorizontal:20
   },
   input: {
     height: 50,
