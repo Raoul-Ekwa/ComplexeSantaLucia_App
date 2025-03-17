@@ -18,7 +18,8 @@ const COLORS = {
   lightWhite: "#FAFAFC",
   blue: '#4E55AF',
   blueButton: "#02489B",
-  lightBlue: "#00D2E0"
+  lightBlue: "#00D2E0",
+  appBgColor: "#FAF2F9"
   
 };
 

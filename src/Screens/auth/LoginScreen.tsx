@@ -37,7 +37,7 @@ const LoginScreen = () => {
       return;
     } else  {
       // Si le formulaire est valide, naviguer vers la page suivante
-      navigation.navigate('HomePage');
+      navigation.navigate('BottomTabNavigator');
     
     }
 

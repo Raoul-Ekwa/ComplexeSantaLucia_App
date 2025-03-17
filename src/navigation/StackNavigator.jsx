@@ -6,7 +6,7 @@ import SignUpScreen from '../Screens/auth/SignUpScreen';
 import ForgetPasswordScreen from '../Screens/auth/ForgetPasswordScreen';
 import VerificationCodeScreen from '../Screens/auth/VerificationCodeScreen';
 import StartingPage from '../Screens/home/StartingPage';
-import HomePageScreen from '../Screens/home/HomePageScreen';
+import BottomTabNavigator from './BottomTabNavigator';
 
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -14,15 +14,21 @@ const StackNavigator = () => {
   return (
  
       <Stack.Navigator
-        initialRouteName="StartingPage" // Définir l'écran de connexion comme écran initial
+        initialRouteName="StartingPage" 
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="StartingPage" component={StartingPage} />
+       
         <Stack.Screen name="SignUp" component={SignUpScreen} />
+
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="HomePage" component={HomePageScreen} />
+
         <Stack.Screen name="ForgetPassword" component={ForgetPasswordScreen} />
+
         <Stack.Screen name="VerificationCode" component={VerificationCodeScreen} />
+
+        <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
+
       </Stack.Navigator>
   
   );

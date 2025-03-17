@@ -1,16 +1,29 @@
+import {StatusBar, StyleSheet} from 'react-native';
 import React from 'react';
-import { StatusBar, StyleSheet} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native'; // Assurez-vous d'importer NavigationContainer
-import StackNavigator from './src/navigation/StackNavigator'; // Importez votre StackNavigator
+import BottomTabNavigator from './src/navigation/BottomTabNavigator';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import StackNavigator from './src/navigation/StackNavigator';
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <>
-      <StatusBar barStyle="dark-content" backgroundColor="lightgreen" />
-      <NavigationContainer style={styles.container}>
-        <StackNavigator />
-      </NavigationContainer>
-    </>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        
+       <Stack.Screen name="Stack" component={StackNavigator} />
+
+        <Stack.Screen
+          name="Bottom Navigator"
+          component={BottomTabNavigator}
+          options={{
+            headerShown: false,
+          }}
+        />
+      </Stack.Navigator>
+      <StatusBar style="auto" />
+    </NavigationContainer>
   );
 };
 
@@ -19,9 +32,12 @@ export default App;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'lightgreen',
+    backgroundColor: '#faf2f9',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  textStyle: {
+    fontFamily: 'regular',
+    fontSize: 20,
   },
 });
-
-
-
