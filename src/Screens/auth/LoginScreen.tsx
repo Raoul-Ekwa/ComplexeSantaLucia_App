@@ -14,7 +14,7 @@ import {COLORS, SHADOWS, SIZES} from '../../constants/theme';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MyButton from '../../components/MyButton';
 import {useNavigation} from '@react-navigation/native'; // Import de la navigation
-import { Fonts} from "../../styles/fonts"
+import {Fonts} from '../../styles/fonts';
 const LoginScreen = () => {
   const navigation = useNavigation();
 
@@ -35,10 +35,9 @@ const LoginScreen = () => {
         'Please fill in all fields and select a country.',
       );
       return;
-    } else  {
+    } else {
       // Si le formulaire est valide, naviguer vers la page suivante
       navigation.navigate('BottomTabNavigator');
-    
     }
 
     // Affichons les donnees saisies du formulaire dans la console
@@ -122,25 +121,74 @@ const LoginScreen = () => {
 
         {/* Section pour les termes et conditions avec la checkbox */}
         <View style={styles.bottomTextContainer}>
-          <TouchableOpacity style={styles.bottomText} onPress={() => navigation.navigate("ForgetPassword")}>
-            <Text style={{ fontFamily: Fonts.Regular, color: '#00D2E0', fontSize: SIZES.small}}>
+          <TouchableOpacity
+            style={styles.bottomText}
+            onPress={() => navigation.navigate('ForgetPassword')}>
+            <Text
+              style={{
+                fontFamily: Fonts.Regular,
+                color: '#00D2E0',
+                fontSize: SIZES.small,
+              }}>
               Forget Password
             </Text>
           </TouchableOpacity>
         </View>
-        <MyButton title="Log in" onPress={handleSubmit} style={styles.button}/>
+        <MyButton title="Log in" onPress={handleSubmit} style={styles.button} />
       </View>
 
       <View style={styles.signInText}>
-        <Text style={{ fontFamily: Fonts.Regular, color: COLORS.gray2, fontSize: SIZES.small}}>
+        <Text
+          style={{
+            fontFamily: Fonts.Regular,
+            color: COLORS.gray2,
+            fontSize: SIZES.small,
+          }}>
           Don't have an account.
         </Text>
         <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
-          <Text style={{ fontFamily: Fonts.Regular, color: COLORS.lightBlue, fontSize: SIZES.small}}>
+          <Text
+            style={{
+              fontFamily: Fonts.Regular,
+              color: COLORS.lightBlue,
+              fontSize: SIZES.small,
+            }}>
             Create new account
           </Text>
         </TouchableOpacity>
       </View>
+
+      {/* Section pour les réseaux sociaux */}
+
+      <View style={styles.bottomSocialWrapper}>
+        <View style={styles.textForSocialIcon}>
+          <Text style={{fontFamily: Fonts.SemiBold, fontSize: SIZES.large}}>
+            Or log in with
+          </Text>
+        </View>
+
+        <View style={styles.socialMediaContainer}>
+          <TouchableOpacity style={styles.socialMediaButton}>
+            <Image
+              source={require('../../assets/images/twitterSanta.png')}
+              style={styles.logoIcon}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.socialMediaButton}>
+            <Image
+              source={require('../../assets/images/googleSanta.png')}
+              style={styles.logoIcon}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.socialMediaButton}>
+            <Image
+              source={require('../../assets/images/linkedInSanta.png')}
+              style={styles.logoIcon}
+            />
+          </TouchableOpacity>
+        </View>
+      </View>
+      {/* Section pour les termes et conditions */}
     </KeyboardAvoidingView>
   );
 };
@@ -158,7 +206,7 @@ const styles = StyleSheet.create({
     width: 200,
     height: 100,
     resizeMode: 'contain',
-    marginTop:15
+    marginTop: 15,
   },
   signUpwrapper: {
     width: '90%',
@@ -198,7 +246,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     position: 'absolute',
     right: -40,
-    bottom: -10
+    bottom: -10,
   },
   eyeIconWrapper: {
     position: 'absolute',
@@ -215,5 +263,26 @@ const styles = StyleSheet.create({
     marginTop: 40,
     fontFamily: Fonts.Regular,
   },
-  
+  socialMediaButton: {
+    marginHorizontal: 10,
+  },
+  logoIcon: {
+    width: 60,
+    height: 60,
+    resizeMode: 'contain',
+  },
+  bottomSocialWrapper: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textForSocialIcon: {
+    marginTop: 50,
+  },
+  socialMediaContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 30,
+    marginBottom: "40%",
+  },
 });

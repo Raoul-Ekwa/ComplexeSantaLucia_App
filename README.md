@@ -1,97 +1,161 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Application Mobile Complexe Santa Lucia - Une Expérience de Shopping en React Native
 
-# Getting Started
+L'Application Mobile du Complexe Santa Lucia est une application React Native qui offre une expérience de shopping fluide pour le complexe commercial Santa Lucia. L'application comprend l'authentification des utilisateurs, la navigation des produits, la gestion de carte de fidélité et la diffusion de contenu promotionnel.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+Cette application mobile sert de plateforme numérique pour le complexe commercial Santa Lucia, permettant aux clients de parcourir différentes catégories de produits. L'application met en place un système de navigation moderne avec à la fois une navigation par pile (stack) et par onglet inférieur (bottom tab) pour offrir une expérience utilisateur intuitive. Elle inclut des fonctionnalités telles que l'authentification des utilisateurs (connexion/inscription), la récupération de mot de passe, la gestion du profil, la numérisation de produits et un système de carte de fidélité numérique.
 
-## Step 1: Start Metro
+## Structure du Répertoire
+```
+.
+├── src/                          # Dossier de code source
+│   ├── components/               # Composants UI réutilisables
+│   ├── constants/               # Constantes de l'application et configuration du thème
+│   ├── datas/                  # Fichiers de données JSON pour les produits et images
+│   ├── navigation/             # Configuration de la navigation (Stack et Bottom Tab)
+│   ├── redux/                  # Gestion d'état avec Redux
+│   ├── Screens/               # Écrans et vues de l'application
+│   ├── styles/                # Styles globaux et utilitaires responsives
+│   └── types/                 # Définitions de types TypeScript
+├── android/                    # Code spécifique à la plateforme Android
+├── ios/                       # Code spécifique à la plateforme iOS
+├── __tests__/                 # Fichiers de test
+└── app.json                   # Configuration de l'application
+```
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Instructions d'Utilisation
+### Prérequis
+- Node.js (v14 ou version supérieure)
+- Gestionnaire de paquets npm ou yarn
+- React Native CLI
+- Xcode (pour le développement iOS)
+- Android Studio (pour le développement Android)
+- JDK 11 ou version plus récente
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### Installation
+1. Cloner le dépôt :
+```bash
+git clone <repository-url>
+cd ComplexeSantaLucia_App
+```
 
-```sh
-# Using npm
+2. Installer les dépendances :
+```bash
+npm install
+# ou
+yarn install
+```
+
+3. Installer les dépendances iOS :
+```bash
+cd ios
+pod install
+cd ..
+```
+
+### Lancer l'application
+1. Démarrer le bundler Metro :
+```bash
 npm start
-
-# OR using Yarn
+# ou
 yarn start
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+2. Lancer sur iOS :
+```bash
 npm run ios
-
-# OR using Yarn
+# ou
 yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+3. Lancer sur Android :
+```bash
+npm run android
+# ou
+yarn android
+```
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+### Exemples Détailés
+1. Flux d'Authentification :
+```javascript
+// Utilisation de l'écran de connexion
+import LoginScreen from './src/Screens/auth/LoginScreen';
 
-## Step 3: Modify your app
+// Naviguer vers l'écran de connexion
+navigation.navigate('Login');
+```
 
-Now that you have successfully run the app, let's make changes!
+2. Navigation des produits :
+```javascript
+// Accéder aux données des produits
+import productData from './src/datas/shoes.json';
+```
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+### Dépannage
+1. Problèmes de Build
+- Effacer le cache du bundler Metro :
+```bash
+npm start -- --reset-cache
+```
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+2. Problèmes iOS
+- Nettoyer la build Xcode :
+```bash
+cd ios
+xcodebuild clean
+```
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+3. Problèmes Android
+- Nettoyer la build Gradle :
+```bash
+cd android
+./gradlew clean
+```
 
-## Congratulations! :tada:
+## Flux de Données
+L'application suit un modèle de flux de données unidirectionnel en utilisant Redux pour la gestion de l'état. Les données circulent depuis le store Redux à travers les composants React et sont mises à jour via des actions et des réducteurs.
 
-You've successfully run and modified your React Native App. :partying_face:
+```ascii
+Entrée de l'utilisateur -> Actions -> Réducteur -> Store -> Composants UI
+     ^                                          |
+     |__________________________________________|
+```
 
-### Now what?
+Interactions clés des composants :
+1. Le flux d'authentification gère les identifiants de l'utilisateur et la gestion des sessions
+2. Les données des produits sont chargées depuis des fichiers JSON locaux et gérées dans le store Redux
+3. L'état de la navigation est géré par React Navigation
+4. Les composants UI reçoivent les données via Redux connect/hooks
+5. Les appels API sont gérés par des actions Redux
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## Infrastructure
+L'application utilise les composants clés suivants pour l'infrastructure :
 
-# Troubleshooting
+### Configuration Android
+- Version des outils de build : 35.0.0
+- SDK minimum : 24
+- SDK cible : 35
+- Version NDK : 27.1.12297006
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+### Configuration iOS
+- Utilise Swift pour les modules natifs
+- Implémente le pont React Native
+- Configure les permissions et capacités de l'application
 
-# Learn More
+## Déploiement
+### Prérequis
+- Compte Apple Developer valide (pour iOS)
+- Compte Google Play Developer valide (pour Android)
+- Certificats de signature et profils de provisionnement
 
-To learn more about React Native, take a look at the following resources:
+### Étapes de Build
+1. Build de Release iOS :
+```bash
+cd ios
+xcodebuild -workspace ComplexeSantaLucia_App.xcworkspace -scheme ComplexeSantaLucia_App -configuration Release
+```
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+2. Build de Release Android :
+```bash
+cd android
+./gradlew assembleRelease
+```

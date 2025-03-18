@@ -20,7 +20,7 @@ const Tab = createBottomTabNavigator();
 
 // Définition des options globales pour la barre de navigation par onglets
 const screenOptions = {
-  tabBarShowLabel: false,
+  //tabBarShowLabel: false,
   tabBarHideOrKeyboard: true,
   headerShown: false,
   tabBarStyle: {
@@ -46,7 +46,7 @@ const BottomTabNavigator = () => {
             <Ionicons
               name={focused ? 'home' : 'home-outline'} // Changer l'icône selon si l'onglet est sélectionné ou non
               size={24}
-              color={focused ? COLORS.primary : COLORS.gray2} // Changer la couleur selon l'état de sélection
+              color={focused ? COLORS.roseDark : COLORS.gray2} // Changer la couleur selon l'état de sélection
             />
           ),
         }}
@@ -57,10 +57,10 @@ const BottomTabNavigator = () => {
         component={FidelityCard}
         options={{
           tabBarIcon: ({focused}) => (
-            <Ionicons
-              name={focused ? 'cart' : 'cart'}
+            <FontAwesome
+              name={focused ? 'credit-card' : 'credit-card-alt'}
               size={24}
-              color={focused ? COLORS.primary : COLORS.gray2}
+              color={focused ? COLORS.roseDark : COLORS.gray2}
             />
           ),
         }}
@@ -74,7 +74,7 @@ const BottomTabNavigator = () => {
             <Ionicons
               name={focused ? 'scan' : 'scan-outline'}
               size={24}
-              color={focused ? COLORS.primary : COLORS.gray2}
+              color={focused ? COLORS.roseDark: COLORS.gray2}
             />
           ),
         }}
@@ -88,7 +88,7 @@ const BottomTabNavigator = () => {
             <Ionicons
               name={focused ? 'gift' : 'gift-outline'}
               size={24}
-              color={focused ? COLORS.primary : COLORS.gray2}
+              color={focused ? COLORS.roseDark : COLORS.gray2}
             />
           ),
         }}
@@ -102,7 +102,7 @@ const BottomTabNavigator = () => {
             <Ionicons
               name={focused ? 'person' : 'person'}
               size={24}
-              color={focused ? COLORS.primary : COLORS.gray2}
+              color={focused ? COLORS.roseDark : COLORS.gray2}
             />
           ),
         }}
@@ -116,7 +116,7 @@ const BottomTabNavigator = () => {
             <Entypo
               name={focused ? 'dots-three-horizontal' : 'dots-three-horizontal'}
               size={24}
-              color={focused ? COLORS.primary : COLORS.gray2}
+              color={focused ? COLORS.roseDark : COLORS.gray2}
             />
           ),
         }}

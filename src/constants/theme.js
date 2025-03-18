@@ -19,7 +19,12 @@ const COLORS = {
   blue: '#4E55AF',
   blueButton: "#02489B",
   lightBlue: "#00D2E0",
-  appBgColor: "#FAF2F9"
+  bgColor: '#FAF2F9',
+  rose: '#eb529a',
+  roseDark: '#e3097e',
+  bleu: '#023d7d',
+  bleuDark: '#bleu dark',
+  price: '#02489B'
   
 };
 

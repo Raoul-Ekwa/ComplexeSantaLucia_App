@@ -50,7 +50,7 @@ const SignUpScreen = () => {
     }
     // Affichons les donnees saisies du formulaire dans la console 
     console.log('Form submitted', { name, email, phone, selectedCountry });
-    
+
     // Appel de la fonction de navigation pour passer à la page suivante
     navigation.navigate('Login');
   };
@@ -173,7 +173,7 @@ const SignUpScreen = () => {
                 style={styles.checkboxWrapper}
               >
                 <Ionicons
-                  name={isChecked ? 'checkbox-outline' : 'checkbox'}
+                  name={isChecked ? 'checkbox' : 'checkbox-outline'}
                   size={20}
                   color={isChecked ? COLORS.primary : COLORS.blue}
                 />
@@ -273,6 +273,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 10,
     marginRight: 45,
+    marginBottom: "40%",
   },
 });
 
