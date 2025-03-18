@@ -14,7 +14,7 @@ import MyButton from '../../components/MyButton';
 
 const ForgetPasswordScreen = () => {
 
-  const [phone, setPhone] = useState()
+  const [phone, setPhone] = useState() // Etat pour le numero de telephone
 
   const navigation = useNavigation();
   return (

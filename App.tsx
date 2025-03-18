@@ -5,23 +5,31 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import StackNavigator from './src/navigation/StackNavigator';
 
+// Création du stack navigator en utilisant 'createNativeStackNavigator'
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
+    // Le NavigationContainer est nécessaire pour gérer la navigation dans l'application
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
+      
+      {/* Stack.Navigator est utilisé pour définir la pile de navigation avec les écrans à afficher */}
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         
-       <Stack.Screen name="Stack" component={StackNavigator} />
+        {/* Définition du premier écran, "Stack", qui utilise le StackNavigator comme composant */}
+        <Stack.Screen name="Stack" component={StackNavigator} />
 
+        {/* Définition du deuxième écran, "Bottom Navigator", avec le BottomTabNavigator comme composant */}
         <Stack.Screen
           name="Bottom Navigator"
           component={BottomTabNavigator}
           options={{
-            headerShown: false,
+            headerShown: false, // Pas d'en-tête pour cet écran
           }}
         />
       </Stack.Navigator>
+
+      {/* Le StatusBar est utilisé pour gérer l'apparence de la barre d'état en haut de l'écran */}
       <StatusBar style="auto" />
     </NavigationContainer>
   );

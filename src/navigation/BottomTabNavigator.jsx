@@ -15,8 +15,10 @@ import {NavigationContainer} from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {COLORS} from '../constants/index';
 
+// Création de la variable Tab, qui sera utilisée pour définir les onglets du bas
 const Tab = createBottomTabNavigator();
 
+// Définition des options globales pour la barre de navigation par onglets
 const screenOptions = {
   tabBarShowLabel: false,
   tabBarHideOrKeyboard: true,
@@ -31,6 +33,7 @@ const screenOptions = {
   },
 };
 
+// Définition du composant principal de la navigation par onglets
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator screenOptions={screenOptions}>
@@ -41,9 +44,9 @@ const BottomTabNavigator = () => {
         options={{
           tabBarIcon: ({focused}) => (
             <Ionicons
-              name={focused ? 'home' : 'home-outline'}
+              name={focused ? 'home' : 'home-outline'} // Changer l'icône selon si l'onglet est sélectionné ou non
               size={24}
-              color={focused ? COLORS.primary : COLORS.gray2}
+              color={focused ? COLORS.primary : COLORS.gray2} // Changer la couleur selon l'état de sélection
             />
           ),
         }}

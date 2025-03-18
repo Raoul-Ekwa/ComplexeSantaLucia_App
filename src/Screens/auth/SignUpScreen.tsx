@@ -50,6 +50,9 @@ const SignUpScreen = () => {
     }
     // Affichons les donnees saisies du formulaire dans la console 
     console.log('Form submitted', { name, email, phone, selectedCountry });
+    
+    // Appel de la fonction de navigation pour passer à la page suivante
+    navigation.navigate('Login');
   };
 
   return (
