@@ -3,14 +3,12 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Entypo from 'react-native-vector-icons/Entypo';
-import {
-  Home,
-  Profile,
-  Plus,
-  Promotion,
-  Scan,
-  FidelityCard,
-} from '../Screens/index'; //index.jsest le point d'entrée de notre dossier screens
+import HomeScreen from '../Screens/HomeScreen';
+import  ProfileScreen from '../Screens/ProfileScreen';
+import  FidelityCardScreen  from '../Screens/FidelityCardScreen';
+import  ScanScreen  from '../Screens/ScanScreen';
+import  PromotionScreen  from '../Screens/PromotionScreen';
+import  PlusScreen  from '../Screens/PlusScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {COLORS} from '../constants/index';
@@ -40,7 +38,7 @@ const BottomTabNavigator = () => {
 
       <Tab.Screen
         name="Home"
-        component={Home}
+        component={HomeScreen}
         options={{
           tabBarIcon: ({focused}) => (
             <Ionicons
@@ -54,7 +52,7 @@ const BottomTabNavigator = () => {
 
       <Tab.Screen
         name="FidelityCard"
-        component={FidelityCard}
+        component={FidelityCardScreen}
         options={{
           tabBarIcon: ({focused}) => (
             <FontAwesome
@@ -68,7 +66,7 @@ const BottomTabNavigator = () => {
 
       <Tab.Screen
         name="Scan"
-        component={Scan}
+        component={ScanScreen}
         options={{
           tabBarIcon: ({focused}) => (
             <Ionicons
@@ -82,7 +80,7 @@ const BottomTabNavigator = () => {
 
       <Tab.Screen
         name="Promotion"
-        component={Promotion}
+        component={PromotionScreen}
         options={{
           tabBarIcon: ({focused}) => (
             <Ionicons
@@ -96,7 +94,7 @@ const BottomTabNavigator = () => {
 
       <Tab.Screen
         name="Profile"
-        component={Profile}
+        component={ProfileScreen}
         options={{
           tabBarIcon: ({focused}) => (
             <Ionicons
@@ -110,7 +108,7 @@ const BottomTabNavigator = () => {
 
       <Tab.Screen
         name="Plus"
-        component={Plus}
+        component={PlusScreen}
         options={{
           tabBarIcon: ({focused}) => (
             <Entypo

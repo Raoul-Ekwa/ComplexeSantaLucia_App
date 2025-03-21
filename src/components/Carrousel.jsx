@@ -1,45 +1,92 @@
-import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
-import { SliderBox } from 'react-native-image-slider-box';
-import { COLORS } from '../constants';
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, Dimensions, Image, Text } from 'react-native';
+import Carousel from 'react-native-snap-carousel';
+
+const { width, height } = Dimensions.get('window');
 
 const Carrousel = () => {
-  const slides = [
-    "https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    "https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    "https://images.pexels.com/photos/439227/pexels-photo-439227.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    "https://images.pexels.com/photos/3356416/pexels-photo-3356416.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  const images = [
+    require('../assets/images/slider_1.jpg'),
+    require('../assets/images/slider_2.jpg'),
+    require('../assets/images/slider_3.jpg'),
   ];
 
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const renderItem = ({ item }) => {
+    return (
+      <View style={styles.slide}>
+        <Image source={item} style={styles.image} />
+      </View>
+    );
+  };
+
+  // Défilement automatique
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex(prevIndex => (prevIndex + 1) % images.length);
+    }, 3000); // Défilement toutes les 3 secondes
+
+    return () => clearInterval(interval); // Nettoyage de l'intervalle quand le composant est démonté
+  }, []);
+
   return (
-    <View style={styles.carouselContainer}>
-      <SliderBox 
-        images={slides}
-        dotColor={COLORS.primary}
-        inactiveDotColor={COLORS.secondary}
-        ImageComponentStyle={{
-          borderRadius: 15,
-          width: "93%",
-          marginTop: 15,
-          height: 200, // Assurez-vous que les images ont une hauteur définie
-        }}
-        autoplay
-        circleLoop
-        onError={(error) => console.log('Error loading image:', error)} // Gestion des erreurs
+    <View style={styles.container}>
+      <Carousel
+        data={images}
+        renderItem={renderItem}
+        sliderWidth={width}
+        itemWidth={width - 50} // Ajustez l'espacement de l'élément
+        loop={true}
+        autoplay={true}
+        autoplayInterval={3000} // Défilement automatique toutes les 3 secondes
+        onSnapToItem={index => setActiveIndex(index)} // Mise à jour de l'index actif
+        dotStyle={styles.activeDot}
+        inactiveDotStyle={styles.inactiveDot}
+        dotContainerStyle={styles.dotContainer}
       />
     </View>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    //backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  slide: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    //backgroundColor: 'white',
+    borderRadius: 5,
+    height: 200,
+    padding: 10,
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 5,
+  },
+  dotContainer: {
+    position: 'absolute',
+    bottom: 10,
+    alignSelf: 'center',
+  },
+  activeDot: {
+    backgroundColor: 'blue',
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+  },
+  inactiveDot: {
+    backgroundColor: 'gray',
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+  },
+});
+
 export default Carrousel;
 
-const styles = StyleSheet.create({
-  carouselContainer: {
-    flex: 1,
-    alignItems: "center",
-    marginTop: 100,  // Réduit la marge top pour tester la visibilité
-    marginBottom: 10,
-    justifyContent: 'center', // Centrer le carousel verticalement
-  }
-});
+

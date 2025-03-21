@@ -11,8 +11,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {COLORS, SIZES, SHADOWS} from '../constants';
 import SearchBar from '../components/Home/SearchBar';
 import Carrousel from '../components/Carrousel';
+import CategorieScreen from './CategorieScreen';
 
-const HomePageScreen = () => {
+const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.appBarWrapper}>
@@ -49,8 +50,11 @@ const HomePageScreen = () => {
         {/* Notre barre de recherche de la Home Page*/ }
         <SearchBar/>
 
-        {/* Notre barre de recherche de la Home Page*/ }
+        {/* Notre Carousel de la Home Page*/ }
         <Carrousel/>
+
+        {/* Notre Categorie de la Home Page*/ }
+        <CategorieScreen/>
     
 
       </View>
@@ -58,7 +62,7 @@ const HomePageScreen = () => {
   );
 };
 
-export default HomePageScreen;
+export default HomeScreen; 
 
 const styles = StyleSheet.create({
   container: {

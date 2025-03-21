@@ -1,21 +1,21 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Plus = () => {
+const PatiserieScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Plus</Text>
+      <Text>PatiserieScreen</Text>
     </View>
   )
 }
 
-export default Plus
+export default PatiserieScreen
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#faf2f9',
-    alignItems: 'center',
     justifyContent: 'center',
-  },
+    alignItems: 'center',
+    backgroundColor: '#faf2f9',
+  }
 })

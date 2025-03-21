@@ -42,6 +42,7 @@ const LoginScreen = () => {
 
     // Affichons les donnees saisies du formulaire dans la console
     console.log('Form submitted', {name, phone});
+    //navigation.navigate('HomeScreen');
   };
 
   return (

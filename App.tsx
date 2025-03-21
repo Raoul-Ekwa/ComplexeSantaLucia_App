@@ -21,7 +21,7 @@ const App = () => {
 
         {/* Définition du deuxième écran, "Bottom Navigator", avec le BottomTabNavigator comme composant */}
         <Stack.Screen
-          name="Bottom Navigator"
+          name="BottomTabNavigator"
           component={BottomTabNavigator}
           options={{
             headerShown: false, // Pas d'en-tête pour cet écran

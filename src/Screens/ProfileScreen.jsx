@@ -1,15 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Promotion = () => {
+const ProfileScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Promotion</Text>
+      <Text>Profile</Text>
     </View>
   )
 }
 
-export default Promotion
+export default ProfileScreen
 
 const styles = StyleSheet.create({
   container: {

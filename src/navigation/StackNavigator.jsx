@@ -1,4 +1,3 @@
-
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import LoginScreen from '../Screens/auth/LoginScreen';
@@ -7,6 +6,24 @@ import ForgetPasswordScreen from '../Screens/auth/ForgetPasswordScreen';
 import VerificationCodeScreen from '../Screens/auth/VerificationCodeScreen';
 import StartingPage from '../Screens/home/StartingPage';
 import BottomTabNavigator from './BottomTabNavigator';
+
+import AchatScreen from '../Screens/Categories/AchatScreen';
+
+import AideScreen from '../Screens/Categories/AideScreen';
+
+import ContactScreen from '../Screens/Categories/ContactScreen';
+
+import PatiserieScreen from '../Screens/Categories/PatiserieScreen';
+
+import FastFoodScreen from '../Screens/Categories/FastFoodScreen';
+
+import HotelScreen from '../Screens/Categories/HotelScreen';
+
+import PharmacieScreen from '../Screens/Categories/PharmacieScreen';
+
+import LocalisationScreen from '../Screens/Categories/LocalisationScreen';
+
+import NumeroUtilScreen from '../Screens/Categories/NumeroUtilScreen';
 
 const StackNavigator = () => {
   // Création du stack navigator
@@ -31,10 +48,22 @@ const StackNavigator = () => {
       <Stack.Screen name="VerificationCode" component={VerificationCodeScreen} />
 
       <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
+
+      {/* Définition des autres routes dans la pile de navigation des categories */}
+      <Stack.Screen name="Achat" component={AchatScreen} />
+      <Stack.Screen name="Aide" component={AideScreen} />
+      <Stack.Screen name="Contact" component={ContactScreen} />
+      <Stack.Screen name="FastFood" component={FastFoodScreen} />
+      <Stack.Screen name="Hotel" component={HotelScreen} />
+      <Stack.Screen name="Localisation" component={LocalisationScreen} />
+      <Stack.Screen name="NumeroUtil" component={NumeroUtilScreen} />
+      <Stack.Screen name="Patiserie" component={PatiserieScreen} />
+      <Stack.Screen name="Pharmacie" component={PharmacieScreen} />
       
     </Stack.Navigator>
   );
 };
 
 export default StackNavigator;
+
 

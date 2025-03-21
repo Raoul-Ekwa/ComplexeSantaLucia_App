@@ -1,21 +1,21 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Scan = () => {
+const HotelScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Scan</Text>
+      <Text>HotelScreen</Text>
     </View>
   )
 }
 
-export default Scan
+export default HotelScreen
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#faf2f9',
-    alignItems: 'center',
     justifyContent: 'center',
-  },
+    alignItems: 'center',
+    backgroundColor: '#faf2f9',
+  }
 })
