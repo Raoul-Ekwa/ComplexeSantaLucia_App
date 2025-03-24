@@ -1,0 +1,228 @@
+{
+    "page": 1,
+    "per_page": 10,
+    "photos": [
+        {
+            "id": 2562992,
+            "width": 5184,
+            "height": 3456,
+            "url": "https://www.pexels.com/photo/pair-of-brown-leather-shoes-2562992/",
+            "photographer": "Andre Moura",
+            "photographer_url": "https://www.pexels.com/@oandremoura",
+            "photographer_id": 1251397,
+            "avg_color": "#A36845",
+            "src": {
+                "original": "https://images.pexels.com/photos/2562992/pexels-photo-2562992.png",
+                "large2x": "https://images.pexels.com/photos/2562992/pexels-photo-2562992.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "large": "https://images.pexels.com/photos/2562992/pexels-photo-2562992.png?auto=compress&cs=tinysrgb&h=650&w=940",
+                "medium": "https://images.pexels.com/photos/2562992/pexels-photo-2562992.png?auto=compress&cs=tinysrgb&h=350",
+                "small": "https://images.pexels.com/photos/2562992/pexels-photo-2562992.png?auto=compress&cs=tinysrgb&h=130",
+                "portrait": "https://images.pexels.com/photos/2562992/pexels-photo-2562992.png?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                "landscape": "https://images.pexels.com/photos/2562992/pexels-photo-2562992.png?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+                "tiny": "https://images.pexels.com/photos/2562992/pexels-photo-2562992.png?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+            },
+            "liked": false,
+            "alt": "Brown leather shoes, a vintage camera, knife and wallet on a patterned background."
+        },
+        {
+            "id": 6153367,
+            "width": 6467,
+            "height": 4311,
+            "url": "https://www.pexels.com/photo/person-in-black-and-white-nike-sneakers-6153367/",
+            "photographer": "cottonbro studio",
+            "photographer_url": "https://www.pexels.com/@cottonbro",
+            "photographer_id": 1437723,
+            "avg_color": "#928C8A",
+            "src": {
+                "original": "https://images.pexels.com/photos/6153367/pexels-photo-6153367.jpeg",
+                "large2x": "https://images.pexels.com/photos/6153367/pexels-photo-6153367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "large": "https://images.pexels.com/photos/6153367/pexels-photo-6153367.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "medium": "https://images.pexels.com/photos/6153367/pexels-photo-6153367.jpeg?auto=compress&cs=tinysrgb&h=350",
+                "small": "https://images.pexels.com/photos/6153367/pexels-photo-6153367.jpeg?auto=compress&cs=tinysrgb&h=130",
+                "portrait": "https://images.pexels.com/photos/6153367/pexels-photo-6153367.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                "landscape": "https://images.pexels.com/photos/6153367/pexels-photo-6153367.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+                "tiny": "https://images.pexels.com/photos/6153367/pexels-photo-6153367.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+            },
+            "liked": false,
+            "alt": "Focus on stylish footwear and advanced prosthetics in a contemporary setting."
+        },
+        {
+            "id": 6594253,
+            "width": 5248,
+            "height": 3499,
+            "url": "https://www.pexels.com/photo/a-girl-wearing-black-leather-boots-6594253/",
+            "photographer": "cottonbro studio",
+            "photographer_url": "https://www.pexels.com/@cottonbro",
+            "photographer_id": 1437723,
+            "avg_color": "#A48885",
+            "src": {
+                "original": "https://images.pexels.com/photos/6594253/pexels-photo-6594253.jpeg",
+                "large2x": "https://images.pexels.com/photos/6594253/pexels-photo-6594253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "large": "https://images.pexels.com/photos/6594253/pexels-photo-6594253.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "medium": "https://images.pexels.com/photos/6594253/pexels-photo-6594253.jpeg?auto=compress&cs=tinysrgb&h=350",
+                "small": "https://images.pexels.com/photos/6594253/pexels-photo-6594253.jpeg?auto=compress&cs=tinysrgb&h=130",
+                "portrait": "https://images.pexels.com/photos/6594253/pexels-photo-6594253.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                "landscape": "https://images.pexels.com/photos/6594253/pexels-photo-6594253.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+                "tiny": "https://images.pexels.com/photos/6594253/pexels-photo-6594253.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+            },
+            "liked": false,
+            "alt": "Fashionable black leather boots paired with trendy striped socks for a chic look."
+        },
+        {
+            "id": 5214139,
+            "width": 3985,
+            "height": 4981,
+            "url": "https://www.pexels.com/photo/man-wearing-black-leather-boots-5214139/",
+            "photographer": "Justus Menke",
+            "photographer_url": "https://www.pexels.com/@justus-menke-3490295",
+            "photographer_id": 3490295,
+            "avg_color": "#837C7B",
+            "src": {
+                "original": "https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg",
+                "large2x": "https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "large": "https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "medium": "https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg?auto=compress&cs=tinysrgb&h=350",
+                "small": "https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg?auto=compress&cs=tinysrgb&h=130",
+                "portrait": "https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                "landscape": "https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+                "tiny": "https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+            },
+            "liked": false,
+            "alt": "Close-up of a man adjusting his black leather boots outdoors, showcasing modern fashion."
+        },
+        {
+            "id": 5730956,
+            "width": 4160,
+            "height": 6240,
+            "url": "https://www.pexels.com/photo/photograph-of-a-person-wearing-white-and-red-socks-5730956/",
+            "photographer": "cottonbro studio",
+            "photographer_url": "https://www.pexels.com/@cottonbro",
+            "photographer_id": 1437723,
+            "avg_color": "#7D645D",
+            "src": {
+                "original": "https://images.pexels.com/photos/5730956/pexels-photo-5730956.jpeg",
+                "large2x": "https://images.pexels.com/photos/5730956/pexels-photo-5730956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "large": "https://images.pexels.com/photos/5730956/pexels-photo-5730956.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "medium": "https://images.pexels.com/photos/5730956/pexels-photo-5730956.jpeg?auto=compress&cs=tinysrgb&h=350",
+                "small": "https://images.pexels.com/photos/5730956/pexels-photo-5730956.jpeg?auto=compress&cs=tinysrgb&h=130",
+                "portrait": "https://images.pexels.com/photos/5730956/pexels-photo-5730956.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                "landscape": "https://images.pexels.com/photos/5730956/pexels-photo-5730956.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+                "tiny": "https://images.pexels.com/photos/5730956/pexels-photo-5730956.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+            },
+            "liked": false,
+            "alt": "Close-up of sneakers and socks on a metal ladder in bright sunlight, emphasizing casual style."
+        },
+        {
+            "id": 19090,
+            "width": 4087,
+            "height": 2495,
+            "url": "https://www.pexels.com/photo/pair-of-blue-lace-up-sneakers-19090/",
+            "photographer": "Web Donut",
+            "photographer_url": "https://www.pexels.com/@webdonut",
+            "photographer_id": 1889,
+            "avg_color": "#BBBDC4",
+            "src": {
+                "original": "https://images.pexels.com/photos/19090/pexels-photo.jpg",
+                "large2x": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "large": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "medium": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350",
+                "small": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=130",
+                "portrait": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                "landscape": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+                "tiny": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+            },
+            "liked": false,
+            "alt": "Pair of stylish blue canvas shoes with white soles displayed against a neutral background."
+        },
+        {
+            "id": 2529148,
+            "width": 6520,
+            "height": 8150,
+            "url": "https://www.pexels.com/photo/photo-of-sneakers-on-white-background-2529148/",
+            "photographer": "Melvin Buezo",
+            "photographer_url": "https://www.pexels.com/@melvin-buezo-1253763",
+            "photographer_id": 1253763,
+            "avg_color": "#CFD2D6",
+            "src": {
+                "original": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+                "large2x": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "large": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "medium": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&h=350",
+                "small": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&h=130",
+                "portrait": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                "landscape": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+                "tiny": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+            },
+            "liked": false,
+            "alt": "Floating modern sneakers showcasing trendy design and vibrant colors."
+        },
+        {
+            "id": 1598505,
+            "width": 5061,
+            "height": 3374,
+            "url": "https://www.pexels.com/photo/nike-shoes-on-black-backround-1598505/",
+            "photographer": "Mnz",
+            "photographer_url": "https://www.pexels.com/@mnzoutfits",
+            "photographer_id": 748098,
+            "avg_color": "#464647",
+            "src": {
+                "original": "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg",
+                "large2x": "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "large": "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "medium": "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&h=350",
+                "small": "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&h=130",
+                "portrait": "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                "landscape": "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+                "tiny": "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+            },
+            "liked": false,
+            "alt": "Close-up of fashionable gray and orange high-top sneakers displayed against a minimal background."
+        },
+        {
+            "id": 267320,
+            "width": 4080,
+            "height": 2720,
+            "url": "https://www.pexels.com/photo/three-unpaired-red-gray-and-blue-horsebit-loafers-267320/",
+            "photographer": "Pixabay",
+            "photographer_url": "https://www.pexels.com/@pixabay",
+            "photographer_id": 2659,
+            "avg_color": "#947F72",
+            "src": {
+                "original": "https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg",
+                "large2x": "https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "large": "https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "medium": "https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&h=350",
+                "small": "https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&h=130",
+                "portrait": "https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                "landscape": "https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+                "tiny": "https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+            },
+            "liked": false,
+            "alt": "Three colorful leather loafers displayed outdoors showcasing style and elegance."
+        },
+        {
+            "id": 336372,
+            "width": 2048,
+            "height": 1365,
+            "url": "https://www.pexels.com/photo/close-up-of-shoes-and-bag-336372/",
+            "photographer": "Alexandra Maria",
+            "photographer_url": "https://www.pexels.com/@alexandra-maria-58259",
+            "photographer_id": 58259,
+            "avg_color": "#997C73",
+            "src": {
+                "original": "https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg",
+                "large2x": "https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "large": "https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "medium": "https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?auto=compress&cs=tinysrgb&h=350",
+                "small": "https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?auto=compress&cs=tinysrgb&h=130",
+                "portrait": "https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                "landscape": "https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+                "tiny": "https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+            },
+            "liked": false,
+            "alt": "Showcasing sleek red stilettos and a chic black handbag in a luxury boutique setting."
+        }
+    ],
+    "total_results": 8000,
+    "next_page": "https://api.pexels.com/v1/search?page=2&per_page=10&query=shoes"
+}

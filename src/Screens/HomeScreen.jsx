@@ -1,6 +1,7 @@
 import {
   Image,
   SafeAreaView,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -12,6 +13,7 @@ import {COLORS, SIZES, SHADOWS} from '../constants';
 import SearchBar from '../components/Home/SearchBar';
 import Carrousel from '../components/Carrousel';
 import CategorieScreen from './CategorieScreen';
+import BonPlanFetchApi from './home/BonPlanFetchApi';
 
 const HomeScreen = () => {
   return (
@@ -47,22 +49,25 @@ const HomeScreen = () => {
             </TouchableOpacity>
           </View>
         </View>
-        {/* Notre barre de recherche de la Home Page*/ }
-        <SearchBar/>
+        {/* Notre barre de recherche de la Home Page*/}
+        <SearchBar />
 
-        {/* Notre Carousel de la Home Page*/ }
-        <Carrousel/>
+        <ScrollView>
+          {/* Notre Carousel de la Home Page*/}
+          <Carrousel />
 
-        {/* Notre Categorie de la Home Page*/ }
-        <CategorieScreen/>
-    
+          {/* Notre Categorie de la Home Page*/}
+          <CategorieScreen />
 
+          {/* Recuperation des donnees API des bons plans */}
+          <BonPlanFetchApi />
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
 };
 
-export default HomeScreen; 
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {
