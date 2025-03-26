@@ -25,6 +25,8 @@ import LocalisationScreen from '../Screens/Categories/LocalisationScreen';
 
 import NumeroUtilScreen from '../Screens/Categories/NumeroUtilScreen';
 
+import ModalFilterAgence from '../Screens/ModalFilterAgence';
+
 const StackNavigator = () => {
   // Création du stack navigator
   const Stack = createNativeStackNavigator();
@@ -59,6 +61,9 @@ const StackNavigator = () => {
       <Stack.Screen name="NumeroUtil" component={NumeroUtilScreen} />
       <Stack.Screen name="Patiserie" component={PatiserieScreen} />
       <Stack.Screen name="Pharmacie" component={PharmacieScreen} />
+
+      {/* Modal pour filtrer les categories par agences */}
+      <Stack.Screen name="ModalFilterAgence" component={ModalFilterAgence} />
       
     </Stack.Navigator>
   );

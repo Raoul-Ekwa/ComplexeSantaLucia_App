@@ -40,7 +40,7 @@ export default function CategorieScreen() {
     <View style={styles.container}>
       <View>
         <Text style={{fontSize: SIZES.medium, fontWeight: 'bold'}}>
-          Catégories
+          Nos services 
         </Text>
       </View>
       <FlatList
@@ -58,7 +58,9 @@ export default function CategorieScreen() {
         </Text>
         <TouchableOpacity style={styles.voirPlus}>
           <Text>Voir plus</Text>
-          <Ionicons name="arrow-forward" size={16} color={COLORS.gray} />
+          <View style={{justifyContent:'center', alignItems:'center', marginTop: 3}}>
+             <Ionicons name="arrow-forward" size={17} color={COLORS.gray} />
+          </View>
         </TouchableOpacity>
       </View>
     </View>
@@ -111,7 +113,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 5
+    gap: 5,
+    
   },
   
 });

@@ -52,7 +52,7 @@ const HomeScreen = () => {
         {/* Notre barre de recherche de la Home Page*/}
         <SearchBar />
 
-        <ScrollView>
+        
           {/* Notre Carousel de la Home Page*/}
           <Carrousel />
 
@@ -61,7 +61,7 @@ const HomeScreen = () => {
 
           {/* Recuperation des donnees API des bons plans */}
           <BonPlanFetchApi />
-        </ScrollView>
+  
       </View>
     </SafeAreaView>
   );

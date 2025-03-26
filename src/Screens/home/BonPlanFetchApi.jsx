@@ -11,7 +11,7 @@ const BonPlanFetchApi = () => {
 
   useEffect(() => {
     // Remplacez par votre propre clé API
-    const apiKey = 'V09rDPimycG9trmshBDIdwQbcZwzHW6eqwasCEnLI4yYaTBPyqIcRnhK'; // Remplacez avec votre clé API
+    const apiKey = 'V09rDPimycG9trmshBDIdwQbcZwzHW6eqwasCEnLI4yYaTBPyqIcRnhK'; // clé API
     const url = 'https://api.pexels.com/v1/search?query=shoes&per_page=10'; // URL de l'API
 
     const fetchPhotos = async () => {

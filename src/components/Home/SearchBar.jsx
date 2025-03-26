@@ -4,20 +4,26 @@ import {
   TextInput,
   TouchableOpacity,
   View,
-  Image
+  Image,
+  Modal,
+  Text,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { COLORS, SIZES } from "../../constants";
 import { SHADOWS } from "../../constants";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from "@react-navigation/native";
 import { Fonts } from "../../styles/fonts";
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Slider from '@react-native-community/slider';
+import CheckBox from '@react-native-community/checkbox';
+
 
 const { height, width } = Dimensions.get("window");
 
-const SearchBar = () => {
+const SearchBar = ({ showScanIcon = true, addIconOfOurChoise }) => { 
 
-  const navigation =  useNavigation();
+const navigation = useNavigation();
 
   return (
     <View style={styles.SearchBarContainer}>
@@ -31,12 +37,21 @@ const SearchBar = () => {
           onPressIn={() => {}}
           style={styles.input}
         />
-        <TouchableOpacity onPress={() => {}}>
-          <Image source={require("../../assets/images/ScanIcon.png")} style={styles.logoScan}/>
-        </TouchableOpacity>
+        {showScanIcon && (
+          <TouchableOpacity onPress={() => {}}>
+            <Image source={require("../../assets/images/ScanIcon.png")} style={styles.logoScan} />
+          </TouchableOpacity>
+        )}
+
+        {addIconOfOurChoise && (
+          <TouchableOpacity onPress={() => navigation.navigate("ModalFilterAgence")}> 
+            <FontAwesome name="filter" size={26} color={COLORS.gray} />
+          </TouchableOpacity>
+        )}
       </View>
 
 
+      
     </View>
   );
 };
@@ -62,7 +77,6 @@ const styles = StyleSheet.create({
     fontSize: SIZES.small, 
     paddingLeft: 10,
     fontFamily: Fonts.Bold,
-    //textAlign: "center",
   },
   inputContainer: {
     flexDirection: "row",
@@ -71,7 +85,7 @@ const styles = StyleSheet.create({
     marginHorizontal: SIZES.xLarge + 2,
   },
   cameraIconContainer: {
-   backgroundColor: "darkgreen",
+    backgroundColor: "darkgreen",
     padding: 12,
     borderRadius: SIZES.xSmall,
     marginRight: 18,
@@ -81,5 +95,59 @@ const styles = StyleSheet.create({
     width: 26,
     height: 26,
     resizeMode: 'contain',
-  }
+  },
+  // Style du Modal
+  modalContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // Fond transparent sombre
+  },
+  modalContent: {
+    width: width - 40,
+    backgroundColor: "white",
+    borderRadius: 10,
+    padding: 20,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
+  filterTitle: {
+    fontSize: 16,
+    fontWeight: "bold",
+    marginBottom: 10,
+  },
+  slider: {
+    width: "100%",
+    height: 40,
+    marginBottom: 20,
+  },
+  sliderText: {
+    fontSize: 16,
+    marginBottom: 10,
+  },
+  checkboxContainer: {
+    width: "100%",
+    marginBottom: 20,
+  },
+  checkboxItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  closeButton: {
+    marginTop: 20,
+    backgroundColor: COLORS.primary,
+    padding: 10,
+    borderRadius: 5,
+  },
+  closeButtonText: {
+    color: "white",
+    fontSize: 16,
+  },
 });
+

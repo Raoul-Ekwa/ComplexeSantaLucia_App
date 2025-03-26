@@ -29,12 +29,12 @@ const App = () => {
         />
       </Stack.Navigator>
 
-      {/* Le StatusBar est utilisé pour gérer l'apparence de la barre d'état en haut de l'écran */}
       <StatusBar
         barStyle="dark-content" // Change la couleur du texte de la barre d'état (claire ou foncée)
         backgroundColor="#6200EE" // Change la couleur de fond de la barre d'état
         translucent={false} // Rend la barre d'état opaque, la rendant non transparente
       />
+
     </NavigationContainer>
   );
 };

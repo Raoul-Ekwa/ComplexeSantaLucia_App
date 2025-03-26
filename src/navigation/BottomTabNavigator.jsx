@@ -4,11 +4,11 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Entypo from 'react-native-vector-icons/Entypo';
 import HomeScreen from '../Screens/HomeScreen';
-import  ProfileScreen from '../Screens/ProfileScreen';
-import  FidelityCardScreen  from '../Screens/FidelityCardScreen';
-import  ScanScreen  from '../Screens/ScanScreen';
-import  PromotionScreen  from '../Screens/PromotionScreen';
-import  PlusScreen  from '../Screens/PlusScreen';
+import ProfileScreen from '../Screens/ProfileScreen';
+import FidelityCardScreen from '../Screens/FidelityCardScreen';
+import ScanScreen from '../Screens/ScanScreen';
+import PromotionScreen from '../Screens/PromotionScreen';
+import PlusScreen from '../Screens/PlusScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {COLORS} from '../constants/index';
@@ -35,7 +35,6 @@ const screenOptions = {
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator screenOptions={screenOptions}>
-
       <Tab.Screen
         name="Home"
         component={HomeScreen}
@@ -51,12 +50,12 @@ const BottomTabNavigator = () => {
       />
 
       <Tab.Screen
-        name="FidelityCard"
-        component={FidelityCardScreen}
+        name="Promotion"
+        component={PromotionScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <FontAwesome
-              name={focused ? 'credit-card' : 'credit-card-alt'}
+            <Ionicons
+              name={focused ? 'gift' : 'gift-outline'}
               size={24}
               color={focused ? COLORS.roseDark : COLORS.gray2}
             />
@@ -72,19 +71,19 @@ const BottomTabNavigator = () => {
             <Ionicons
               name={focused ? 'scan' : 'scan-outline'}
               size={24}
-              color={focused ? COLORS.roseDark: COLORS.gray2}
+              color={focused ? COLORS.roseDark : COLORS.gray2}
             />
           ),
         }}
       />
 
       <Tab.Screen
-        name="Promotion"
-        component={PromotionScreen}
+        name="FidelityCard"
+        component={FidelityCardScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <Ionicons
-              name={focused ? 'gift' : 'gift-outline'}
+            <FontAwesome
+              name={focused ? 'credit-card' : 'credit-card-alt'}
               size={24}
               color={focused ? COLORS.roseDark : COLORS.gray2}
             />
@@ -119,7 +118,6 @@ const BottomTabNavigator = () => {
           ),
         }}
       />
-      
     </Tab.Navigator>
   );
 };
