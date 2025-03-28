@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {SIZES, COLORS} from '../constants';
 import {Fonts} from '../styles/fonts';
 import {useNavigation} from '@react-navigation/native';
-import Ionicons from "react-native-vector-icons/Ionicons";
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const categories = [
   {name: 'Mes achats', icon: 'shopping-cart', screen: 'Achat'},
@@ -40,26 +40,37 @@ export default function CategorieScreen() {
     <View style={styles.container}>
       <View>
         <Text style={{fontSize: SIZES.medium, fontWeight: 'bold'}}>
-          Nos services 
+          Nos services
         </Text>
       </View>
-      <FlatList
-        data={categories}
-        renderItem={renderItem}
-        keyExtractor={(item, index) => index.toString()}
-        numColumns={3}
-        columnWrapperStyle={styles.row}
-        contentContainerStyle={styles.scrollContentContainer}
-      />
+
+     
+        
+        <FlatList
+          data={categories}
+          renderItem={renderItem}
+          keyExtractor={(item, index) => index.toString()}
+          numColumns={3}
+          columnWrapperStyle={styles.row}
+          contentContainerStyle={styles.scrollContentContainer}
+        />
+ 
 
       <View style={styles.promotionTitle}>
         <Text style={{fontSize: SIZES.medium, fontWeight: 'bold'}}>
-          Nos Bons Plans 
+          Nos Bons Plans
         </Text>
-        <TouchableOpacity style={styles.voirPlus}>
+        <TouchableOpacity
+          style={styles.voirPlus}
+          onPress={() => navigation.navigate('BonPlan')}>
           <Text>Voir plus</Text>
-          <View style={{justifyContent:'center', alignItems:'center', marginTop: 3}}>
-             <Ionicons name="arrow-forward" size={17} color={COLORS.gray} />
+          <View
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginTop: 3,
+            }}>
+            <Ionicons name="arrow-forward" size={17} color={COLORS.gray} />
           </View>
         </TouchableOpacity>
       </View>
@@ -114,7 +125,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     gap: 5,
-    
   },
-  
 });

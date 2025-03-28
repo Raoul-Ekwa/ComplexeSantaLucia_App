@@ -27,6 +27,8 @@ import NumeroUtilScreen from '../Screens/Categories/NumeroUtilScreen';
 
 import ModalFilterAgence from '../Screens/ModalFilterAgence';
 
+import BonPlanScreen from '../Screens/BonPlanScreen';
+
 const StackNavigator = () => {
   // Création du stack navigator
   const Stack = createNativeStackNavigator();
@@ -64,6 +66,8 @@ const StackNavigator = () => {
 
       {/* Modal pour filtrer les categories par agences */}
       <Stack.Screen name="ModalFilterAgence" component={ModalFilterAgence} />
+
+      <Stack.Screen name="BonPlan" component={BonPlanScreen} />
       
     </Stack.Navigator>
   );
