@@ -6,27 +6,16 @@ import ForgetPasswordScreen from '../Screens/auth/ForgetPasswordScreen';
 import VerificationCodeScreen from '../Screens/auth/VerificationCodeScreen';
 import StartingPage from '../Screens/home/StartingPage';
 import BottomTabNavigator from './BottomTabNavigator';
-
 import AchatScreen from '../Screens/Categories/AchatScreen';
-
 import AideScreen from '../Screens/Categories/AideScreen';
-
 import ContactScreen from '../Screens/Categories/ContactScreen';
-
 import PatiserieScreen from '../Screens/Categories/PatiserieScreen';
-
 import FastFoodScreen from '../Screens/Categories/FastFoodScreen';
-
 import HotelScreen from '../Screens/Categories/HotelScreen';
-
 import PharmacieScreen from '../Screens/Categories/PharmacieScreen';
-
 import LocalisationScreen from '../Screens/Categories/LocalisationScreen';
-
 import NumeroUtilScreen from '../Screens/Categories/NumeroUtilScreen';
-
 import ModalFilterAgence from '../Screens/ModalFilterAgence';
-
 import BonPlanScreen from '../Screens/BonPlanScreen';
 
 const StackNavigator = () => {
@@ -40,17 +29,11 @@ const StackNavigator = () => {
       screenOptions={{ headerShown: false }} // Désactivation de l'en-tête (header) pour toutes les pages dans la pile
     >
       {/* Définition des différentes routes dans la pile de navigation */}
-      
       <Stack.Screen name="StartingPage" component={StartingPage} />
-
       <Stack.Screen name="SignUp" component={SignUpScreen} />
-
       <Stack.Screen name="Login" component={LoginScreen} />
-
       <Stack.Screen name="ForgetPassword" component={ForgetPasswordScreen} />
-
       <Stack.Screen name="VerificationCode" component={VerificationCodeScreen} />
-
       <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
 
       {/* Définition des autres routes dans la pile de navigation des categories */}

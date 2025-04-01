@@ -56,24 +56,7 @@ export default function CategorieScreen() {
         />
  
 
-      <View style={styles.promotionTitle}>
-        <Text style={{fontSize: SIZES.medium, fontWeight: 'bold'}}>
-          Nos Bons Plans
-        </Text>
-        <TouchableOpacity
-          style={styles.voirPlus}
-          onPress={() => navigation.navigate('BonPlan')}>
-          <Text>Voir plus</Text>
-          <View
-            style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginTop: 3,
-            }}>
-            <Ionicons name="arrow-forward" size={17} color={COLORS.gray} />
-          </View>
-        </TouchableOpacity>
-      </View>
+    
     </View>
   );
 }
@@ -114,11 +97,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: COLORS.black,
     textAlign: 'center',
-  },
-  promotionTitle: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 10,
   },
   voirPlus: {
     flexDirection: 'row',

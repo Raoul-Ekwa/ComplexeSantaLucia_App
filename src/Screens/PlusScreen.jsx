@@ -48,23 +48,23 @@ const PlusScreen = () => {
           {/* Navigation vers l'écran "EditProfile" */}
           <TouchableOpacity
             style={styles.iconLine}
-            onPress={() => navigation.navigate('EditProfile')}>
-            <Feather name="user" size={30} />
+            onPress={() => {}}>
+            <Feather name="user" size={24} />
             <Text style={styles.textItems}>Modifier le profil</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.iconLine}>
-            <MaterialIcons name="security" size={30} />
+            <MaterialIcons name="security" size={24} />
             <Text style={styles.textItems}>Securité</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.iconLine}>
-            <MaterialIcons name="notifications-none" size={30} />
+            <MaterialIcons name="notifications-none" size={24} />
             <Text style={styles.textItems}>Notifications</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.iconLine}>
-            <Feather name="lock" size={30} />
+            <Feather name="lock" size={24} />
             <Text style={styles.textItems}>Confidentialité</Text>
           </TouchableOpacity>
         </View>
@@ -79,17 +79,17 @@ const PlusScreen = () => {
         {/* Liste des options d'assistance */}
         <View style={styles.AccountContainer}>
           <TouchableOpacity style={styles.iconLine}>
-            <Feather name="credit-card" size={30} />
+            <Feather name="credit-card" size={24} />
             <Text style={styles.textItems}>Mes abonnements</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.iconLine}>
-            <Feather name="help-circle" size={30} />
+            <Feather name="help-circle" size={24} />
             <Text style={styles.textItems}>Aide & Support</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.iconLine}>
-            <Feather name="alert-circle" size={30} />
+            <Feather name="alert-circle" size={24} />
             <Text style={styles.textItems}>Conditions et Politiques</Text>
           </TouchableOpacity>
         </View>
@@ -104,17 +104,17 @@ const PlusScreen = () => {
         {/* Liste des actions disponibles */}
         <View style={styles.AccountContainer}>
           <TouchableOpacity style={styles.iconLine}>
-            <Feather name="flag" size={30} />
+            <Feather name="flag" size={24} />
             <Text style={styles.textItems}>Signaler un problème</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.iconLine}>
-            <MaterialIcons name="supervisor-account" size={30} />
+            <MaterialIcons name="supervisor-account" size={24} />
             <Text style={styles.textItems}>Ajouter un compte</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.iconLine}>
-            <Feather name="log-out" size={30} />
+            <Feather name="log-out" size={24} />
             <Text style={styles.textItems}>Se déconnecter</Text>
           </TouchableOpacity>
         </View>
@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#faf2f9',
     padding: 20,
+    
   },
   headerContainer: {
     flexDirection: 'row',
@@ -148,8 +149,8 @@ const styles = StyleSheet.create({
     marginLeft: 30,
   },
   photoAccount: {
-    width: 100,
-    height: 100,
+    width: 60,
+    height: 60,
     resizeMode: 'contain',
     borderRadius: 50,
     marginVertical: 1,
@@ -163,7 +164,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     gap: 10,
-    marginVertical: 20,
+    marginVertical: 10,
   },
   AccountContainer: {
     padding: 10,
@@ -178,7 +179,7 @@ const styles = StyleSheet.create({
   iconLine: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 20,
+    gap: 10,
     marginBottom: 20,
   },
   textItems: {

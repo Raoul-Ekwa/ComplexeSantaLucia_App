@@ -44,7 +44,7 @@ const navigation = useNavigation();
         )}
 
         {addIconOfOurChoise && (
-          <TouchableOpacity onPress={() => navigation.navigate("ModalFilterAgence")}> 
+          <TouchableOpacity onPress={() => {}}> 
             <FontAwesome name="filter" size={26} color={COLORS.gray} />
           </TouchableOpacity>
         )}

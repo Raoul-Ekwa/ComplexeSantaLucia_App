@@ -1,19 +1,79 @@
-import {StyleSheet, Text, View, Button, TextInput, FlatList} from 'react-native';
-import React, {useState, useEffect} from 'react';
+import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import ReturnButtonAndTitle from '../components/ReturnButtonAndTitle';
-import {COLORS, SIZES, SHADOWS} from '../constants';
+import { COLORS, SIZES, SHADOWS } from '../constants';
 import SearchBar from '../components/Home/SearchBar';
-import ModalFilterAgence from './ModalFilterAgence';
 const PromotionScreen = () => {
+  const [photos, setPhotos] = useState([]); // Stocke les photos récupérées
+  const [loading, setLoading] = useState(true); // Indique si les données sont en cours de chargement
+  const [error, setError] = useState(null); // Gère les erreurs
+
+  useEffect(() => {
+    const apiKey = 'V09rDPimycG9trmshBDIdwQbcZwzHW6eqwasCEnLI4yYaTBPyqIcRnhK'; 
+    const url = 'https://api.pexels.com/v1/search?query=watches&per_page=10'; 
+
+    const fetchPhotos = async () => {
+      try {
+        const response = await axios.get(url, {
+          headers: {
+            Authorization: apiKey, 
+          },
+        });
+
+        if (response.data && response.data.photos) {
+          setPhotos(response.data.photos); 
+        } else {
+          setError('Aucune photo trouvée');
+        }
+      } catch (error) {
+        console.log(error);
+        setError('Une erreur est survenue'); 
+      } finally {
+        setLoading(false); 
+      }
+    };
+
+    fetchPhotos(); 
+  }, []); 
+
+  if (loading) {
+    return <View><Text>Chargement...</Text></View>;
+  }
+
+  if (error) {
+    return <View><Text>{error}</Text></View>;
+  }
 
   return (
-      <View style={styles.container}>
-        {/* Composant pour retourner a la home page */}
-        <ReturnButtonAndTitle title="Promotions" />
+    <View style={styles.container}>
+       {/* Composant pour retourner à la home page */}
+       <ReturnButtonAndTitle title="Promotions" />
 
-        {/* La barre de recherche sans l'icone de scan et avec l'icone de filtre*/}
-        <SearchBar showScanIcon={false} addIconOfOurChoise={true} />
-      </View>
+        {/* La barre de recherche sans l'icône de scan et avec l'icône de filtre */}
+       <SearchBar showScanIcon={false} addIconOfOurChoise={true} />
+
+      {/* Liste des photos */}
+      <FlatList
+        numColumns={2}
+        showsVerticalScrollIndicator={false}
+        data={photos}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => (
+          <TouchableOpacity style={styles.item}>
+            <Image source={{ uri: item.src?.small }} style={styles.image} />
+            <Text>{item.photographer}</Text>
+            <Text style={styles.price}>
+              {item.width} Fcfa
+            </Text>
+            <Text numberOfLines={1} style={styles.ImageDescription}>
+              {item.alt}
+            </Text>
+          </TouchableOpacity>
+        )}
+        contentContainerStyle={styles.flatListContainer} // Ajout du conteneur de la FlatList
+      />
+    </View>
   );
 };
 
@@ -24,16 +84,36 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     backgroundColor: COLORS.bgColor,
+    
   },
-  itemStyle: {
+  item: {
+    marginBottom: 20, // Augmenter l'espacement entre les éléments
+    marginHorizontal: 10, // Ajouter de l'espacement entre les colonnes
+    alignItems: 'center',
+    backgroundColor: COLORS.lightWhite,
+    ...SHADOWS.small,
+    padding: 10,
+    borderRadius: 10,
+    justifyContent: 'center',
+  },
+  image: {
+    width: 150,
+    height: 100,
+    borderRadius: 5,
+  },
+  price: {
+    color: COLORS.blue,
+    fontSize: SIZES.medium,
+    fontWeight: 'bold',
+  },
+  ImageDescription: {
+    width: 100,
     padding: 10,
   },
-  textInputStyle: {
-    height: 40,
-    borderWidth: 1,
-    paddingLeft: 20,
-    margin: 5,
-    borderColor: '#009688',
-    backgroundColor: '#FFFFFF',
+  flatListContainer: {
+    paddingBottom: 50, // Ajoute de l'espace en bas pour permettre le défilement jusqu'à la fin
+    marginTop: 10,
   },
 });
+
+

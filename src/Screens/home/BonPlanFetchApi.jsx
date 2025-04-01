@@ -10,8 +10,11 @@ import {
 } from 'react-native';
 import {COLORS, SIZES, SHADOWS} from '../../constants';
 import {Fonts} from '../../styles/fonts';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import {useNavigation} from '@react-navigation/native';
 
 const BonPlanFetchApi = () => {
+  const navigation = useNavigation();
   const [photos, setPhotos] = useState([]); // Stocke les photos récupérées
   const [loading, setLoading] = useState(true); // Indique si les données sont en cours de chargement
   const [error, setError] = useState(null); // Gère les erreurs
@@ -68,40 +71,61 @@ const BonPlanFetchApi = () => {
 
   // Affichage des photos récupérées
   return (
-    <View style={styles.weekGenereuseContainer}>
-      <View style={styles.weekGenereuse}>
-        <Text style={styles.semaineGenereuseText}>Semaine</Text>
-        <Text style={styles.semaineGenereuseText}>Genereuse</Text>
-        <Text style={styles.semaineGenereuseText}>Product are</Text>
-        <Text style={styles.semaineGenereuseText}>priced for 40%</Text>
+    <>
+      <View style={styles.promotionTitle}>
+        <Text style={{fontSize: SIZES.medium, fontWeight: 'bold'}}>
+          Nos Bons Plans
+        </Text>
+        <TouchableOpacity
+          style={styles.voirPlus}
+          onPress={() => navigation.navigate('BonPlan')}>
+          <Text>Voir plus</Text>
+          <View
+            style={{
+             
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginTop: 3,
+            }}>
+            <Ionicons name="arrow-forward" size={17} color={COLORS.gray} />
+          </View>
+        </TouchableOpacity>
       </View>
-      <FlatList
-        contentContainerStyle={styles.container}
-        horizontal={true}
-        showsHorizontalScrollIndicator={false} // Masque le curseur horizontal
-        data={photos}
-        keyExtractor={item => item.id.toString()} // Assurez-vous d'utiliser un identifiant unique
-        renderItem={({item}) => (
-          <TouchableOpacity style={styles.item}>
-            {/* Assurez-vous que `item.src.small` existe avant de l'utiliser */}
-            <Image source={{uri: item.src?.small}} style={styles.image} />
-            <Text>{item.photographer}</Text>
-            <Text
-              style={{
-                color: COLORS.blue,
-                fontSize: SIZES.medium,
-                fontWeight: 'bold',
-              }}>
-              {item.width} Fcfa
-            </Text>
-            <Text numberOfLines={1} style={styles.textAlt}>
-              {item.alt}
-            </Text>
-          </TouchableOpacity>
-        )}
-        ListEmptyComponent={<Text>Aucune photo trouvée.</Text>} // Message si aucune photo n'est trouvée
-      />
-    </View>
+      <View style={styles.weekGenereuseContainer}>
+        <View style={styles.weekGenereuse}>
+          <Text style={styles.semaineGenereuseText}>Semaine</Text>
+          <Text style={styles.semaineGenereuseText}>Genereuse</Text>
+          <Text style={styles.semaineGenereuseText}>Product are</Text>
+          <Text style={styles.semaineGenereuseText}>priced for 40%</Text>
+        </View>
+        <FlatList
+          contentContainerStyle={styles.container}
+          horizontal={true}
+          showsHorizontalScrollIndicator={false} // Masque le curseur horizontal
+          data={photos}
+          keyExtractor={item => item.id.toString()} // Assurez-vous d'utiliser un identifiant unique
+          renderItem={({item}) => (
+            <TouchableOpacity style={styles.item}>
+              {/* Assurez-vous que `item.src.small` existe avant de l'utiliser */}
+              <Image source={{uri: item.src?.small}} style={styles.image} />
+              <Text>{item.photographer}</Text>
+              <Text
+                style={{
+                  color: COLORS.blue,
+                  fontSize: SIZES.medium,
+                  fontWeight: 'bold',
+                }}>
+                {item.width} Fcfa
+              </Text>
+              <Text numberOfLines={1} style={styles.textAlt}>
+                {item.alt}
+              </Text>
+            </TouchableOpacity>
+          )}
+          ListEmptyComponent={<Text>Aucune photo trouvée.</Text>} // Message si aucune photo n'est trouvée
+        />
+      </View>
+    </>
   );
 };
 
@@ -131,10 +155,14 @@ const styles = StyleSheet.create({
     width: 100, // Limite la largeur du texte
     padding: 10,
   },
+  promotionTitle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+   marginBottom: 5,
+    padding: 10,
+  },
   weekGenereuseContainer: {
     flexDirection: 'row',
-    
-    
   },
   weekGenereuse: {
     backgroundColor: '#F24296',
@@ -151,11 +179,17 @@ const styles = StyleSheet.create({
     gap: 5,
     width: 120,
     height: 200,
-
   },
   semaineGenereuseText: {
     color: '#fff',
     fontSize: 18,
     fontWeight: Fonts.Bold,
+  },
+  voirPlus: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 3,
+   
   },
 });
