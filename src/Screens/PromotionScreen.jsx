@@ -1,9 +1,11 @@
 import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
+import Ionicons  from 'react-native-vector-icons/Ionicons';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReturnButtonAndTitle from '../components/ReturnButtonAndTitle';
 import { COLORS, SIZES, SHADOWS } from '../constants';
 import SearchBar from '../components/Home/SearchBar';
+import { Fonts } from '../styles/fonts';
 const PromotionScreen = () => {
   const [photos, setPhotos] = useState([]); // Stocke les photos récupérées
   const [loading, setLoading] = useState(true); // Indique si les données sont en cours de chargement
@@ -62,13 +64,21 @@ const PromotionScreen = () => {
         renderItem={({ item }) => (
           <TouchableOpacity style={styles.item}>
             <Image source={{ uri: item.src?.small }} style={styles.image} />
-            <Text>{item.photographer}</Text>
+            <Text style={{fontFamily: Fonts.Regular, fontWeight:'bold'}}>{item.photographer}</Text>
+            <View style={styles.toutMondeGagne}>
+              <Image source={require('../assets/images/fire-fill.png')} style={{width: 15, height: 15}} />
+              <Text style={{fontSize: SIZES.small}}>Tous le monde gagne</Text>
+            </View>
             <Text style={styles.price}>
               {item.width} Fcfa
             </Text>
             <Text numberOfLines={1} style={styles.ImageDescription}>
               {item.alt}
             </Text>
+
+            <View style={styles.shareIcon}>
+               <Ionicons name="share-social" size={25} color={COLORS.black} />
+            </View>
           </TouchableOpacity>
         )}
         contentContainerStyle={styles.flatListContainer} // Ajout du conteneur de la FlatList
@@ -109,11 +119,24 @@ const styles = StyleSheet.create({
   ImageDescription: {
     width: 100,
     padding: 10,
+    fontFamily: Fonts.Regular
   },
   flatListContainer: {
     paddingBottom: 50, // Ajoute de l'espace en bas pour permettre le défilement jusqu'à la fin
     marginTop: 10,
   },
+  toutMondeGagne: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 5,
+    marginBottom: 5,
+  },
+  shareIcon: {
+    position: 'relative',
+    Bottom: 10,
+    left: 30,
+  }
 });
 
 

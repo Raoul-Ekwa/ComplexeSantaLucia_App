@@ -1,44 +1,56 @@
-// Importation des composants nécessaires de React Native et des bibliothèques tierces
-import {
-  Image,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-import React from 'react';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Image, StyleSheet, Text, TouchableOpacity, View, ScrollView } from 'react-native';
+import React, { useState } from 'react';
+import { launchImageLibrary } from 'react-native-image-picker'; // Importation de la fonction pour ouvrir la galerie
+import { useNavigation } from '@react-navigation/core';
 import Feather from 'react-native-vector-icons/Feather';
-import {useNavigation} from '@react-navigation/core'; // Pour gérer la navigation
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import {COLORS} from '../constants';
+import { COLORS } from '../constants';
 import ReturnButtonAndTitle from '../components/ReturnButtonAndTitle';
 
-
-// Définition du composant PlusScreen
 const PlusScreen = () => {
-  const navigation = useNavigation(); // Utilisation de useNavigation pour gérer la navigation dans l'app
+  const navigation = useNavigation();
+  const [profileImage, setProfileImage] = useState(require('../assets/images/PourlaLoterieAmericaine.jpeg')); // Utilisation de useState pour gérer l'image
+
+  // Fonction pour changer la photo
+  const handleChangePhoto = () => {
+    launchImageLibrary(
+      {
+        mediaType: 'photo',
+        quality: 1,
+      },
+      (response) => {
+        if (response.didCancel) {
+          console.log('User cancelled image picker');
+        } else if (response.errorCode) {
+          console.log('ImagePicker Error: ', response.errorMessage);
+        } else {
+          const selectedImage = response.assets[0].uri; // Obtenir l'uri de l'image sélectionnée
+          setProfileImage({ uri: selectedImage }); // Mettre à jour l'image du profil
+        }
+      }
+    );
+  };
 
   return (
     <View style={styles.Container}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <ReturnButtonAndTitle title={"Parametres"}/>
+        <ReturnButtonAndTitle title={"Parametres"} />
 
         {/* Section Photo et Nom */}
         <View style={styles.photoAndNameContainer}>
-          <Image
-            source={require('../assets/images/PourlaLoterieAmericaine.jpeg')}
-            style={styles.photoAccount} // Style appliqué à l'image
-          />
-          <Text style={{fontSize: 17, fontWeight: '500'}}>
+          <Image source={profileImage} style={styles.photoAccount} />
+          <TouchableOpacity style={styles.iconChangePhoto} onPress={handleChangePhoto}>
+            <Ionicons name="camera-outline" size={24} color="#000" />
+          </TouchableOpacity>
+          <Text style={{ fontSize: 17, fontWeight: '500' }}>
             Boueng Ekwa Raoul
           </Text>
         </View>
 
         {/* Section Compte */}
-        <View style={{padding: 10}}>
-          <Text style={{fontSize: 17, fontWeight: '500', marginHorizontal: 15}}>
+        <View style={{ padding: 10 }}>
+          <Text style={{ fontSize: 17, fontWeight: '500', marginHorizontal: 15 }}>
             Compte
           </Text>
         </View>
@@ -48,14 +60,15 @@ const PlusScreen = () => {
           {/* Navigation vers l'écran "EditProfile" */}
           <TouchableOpacity
             style={styles.iconLine}
-            onPress={() => {}}>
+            onPress={() => {}}
+          >
             <Feather name="user" size={24} />
             <Text style={styles.textItems}>Modifier le profil</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.iconLine}>
             <MaterialIcons name="security" size={24} />
-            <Text style={styles.textItems}>Securité</Text>
+            <Text style={styles.textItems}>Sécurité</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.iconLine}>
@@ -70,8 +83,8 @@ const PlusScreen = () => {
         </View>
 
         {/* Section Assistance et à propos */}
-        <View style={{padding: 15}}>
-          <Text style={{fontSize: 17, fontWeight: '500', marginHorizontal: 15}}>
+        <View style={{ padding: 15 }}>
+          <Text style={{ fontSize: 17, fontWeight: '500', marginHorizontal: 15 }}>
             Assistance et à propos
           </Text>
         </View>
@@ -95,8 +108,8 @@ const PlusScreen = () => {
         </View>
 
         {/* Section Actions */}
-        <View style={{padding: 15}}>
-          <Text style={{fontSize: 17, fontWeight: '500', marginHorizontal: 15}}>
+        <View style={{ padding: 15 }}>
+          <Text style={{ fontSize: 17, fontWeight: '500', marginHorizontal: 15 }}>
             Actions
           </Text>
         </View>
@@ -130,23 +143,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#faf2f9',
     padding: 20,
-    
-  },
-  headerContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 60,
-    marginTop: 20,
-  },
-  iconHeaderLeft: {
-    padding: 10,
-    borderRadius: 50,
-    backgroundColor: COLORS.white,
-  },
-  headerText: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginLeft: 30,
   },
   photoAccount: {
     width: 60,
@@ -155,7 +151,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     marginVertical: 1,
     alignSelf: 'center',
-    shadowOffset: {width: 0, height: 1},
+    shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.2,
     shadowRadius: 10,
     elevation: 3,
@@ -163,15 +159,25 @@ const styles = StyleSheet.create({
   photoAndNameContainer: {
     flexDirection: 'column',
     alignItems: 'center',
-    gap: 10,
-    marginVertical: 10,
+  },
+  iconChangePhoto: {
+    position: 'relative',
+    top: -25,
+    right: -30,
+    backgroundColor: '#fff',
+    borderRadius: 30,
+    padding: 2,
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+    elevation: 1,
   },
   AccountContainer: {
     padding: 10,
     backgroundColor: '#fff',
     borderRadius: 10,
     marginHorizontal: 15,
-    shadowOffset: {width: 0, height: 1},
+    shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.2,
     shadowRadius: 10,
     elevation: 1,
@@ -187,3 +193,4 @@ const styles = StyleSheet.create({
     fontWeight: '400',
   },
 });
+
