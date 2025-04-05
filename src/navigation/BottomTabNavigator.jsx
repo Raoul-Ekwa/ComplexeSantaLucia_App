@@ -92,20 +92,6 @@ const BottomTabNavigator = () => {
       />
 
       <Tab.Screen
-        name="Profile"
-        component={ProfileScreen}
-        options={{
-          tabBarIcon: ({focused}) => (
-            <Ionicons
-              name={focused ? 'person' : 'person'}
-              size={24}
-              color={focused ? COLORS.roseDark : COLORS.gray2}
-            />
-          ),
-        }}
-      />
-
-      <Tab.Screen
         name="Plus"
         component={PlusScreen}
         options={{

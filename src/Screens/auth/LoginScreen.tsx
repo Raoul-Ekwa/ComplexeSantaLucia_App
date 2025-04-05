@@ -37,7 +37,7 @@ const LoginScreen = () => {
       return;
     } else {
       // Si le formulaire est valide, naviguer vers la page suivante
-      navigation.navigate('BottomTabNavigator');
+      navigation.navigate('Profile');
     }
 
     // Affichons les donnees saisies du formulaire dans la console

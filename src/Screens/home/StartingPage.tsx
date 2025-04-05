@@ -13,14 +13,14 @@ const StartingPage = () => {
             <Image source={require('../../assets/images/logo_santaLucia.png')} style={[styles.logo, { width: width * 0.5, height: width * 0.5 }]} />
 
             <View style={{ marginTop: height * 0.05 }}>
-                <Text style={[styles.title, { fontSize: width * 0.07 }]}>Welcome to</Text>
+            <Text style={[styles.title, { fontSize: width * 0.05 }]}>Bienvenue au Complexe Santa Lucia</Text>
             </View>
 
             <TouchableOpacity
                 style={[styles.button, { width: width * 0.8, height: height * 0.07 }]}
                 onPress={() => navigation.navigate('SignUp')}
             >
-                <Text style={[styles.buttonText, { fontSize: width * 0.045 }]}>Get started</Text>
+                <Text style={[styles.buttonText, { fontSize: width * 0.045 }]}>Créez un compte</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -28,6 +28,12 @@ const StartingPage = () => {
                 onPress={() => navigation.navigate('Login')}
             >
                 <Text style={{ color: '#4E55AF', fontSize: width * 0.04, fontFamily: Fonts.Bold }}>Vous avez déjà un compte ?</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.createAccount}
+                onPress={() => navigation.navigate('BottomTabNavigator')}
+            >
+                <Text style={{ color: '#4E55AF', fontSize: width * 0.04, fontFamily: Fonts.Bold }}>Passez</Text>
             </TouchableOpacity>
         </View>
     );

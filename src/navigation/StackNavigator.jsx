@@ -17,6 +17,8 @@ import LocalisationScreen from '../Screens/Categories/LocalisationScreen';
 import NumeroUtilScreen from '../Screens/Categories/NumeroUtilScreen';
 import ModalFilterAgence from '../Screens/ModalFilterAgence';
 import BonPlanScreen from '../Screens/BonPlanScreen';
+import HomeScreen from '../Screens/HomeScreen';
+import ProfileScreen from '../Screens/ProfileScreen';
 
 const StackNavigator = () => {
   // Création du stack navigator
@@ -25,9 +27,11 @@ const StackNavigator = () => {
   return (
     // Le Navigateur de stack est utilisé pour la gestion des écrans sous forme de pile
     <Stack.Navigator
-      initialRouteName="StartingPage" // L'écran initial (le premier écran à afficher lors du lancement)
+      initialRouteName="BottomTabNavigator" // L'écran initial (le premier écran à afficher lors du lancement) c'est le BottomTabNavigator car il porte tous les autres ecrans contrairement au HomeScreen
       screenOptions={{ headerShown: false }} // Désactivation de l'en-tête (header) pour toutes les pages dans la pile
-    >
+    >  
+      {/* Page d'acceuil */}
+      <Stack.Screen name="Home" component={HomeScreen} />
       {/* Définition des différentes routes dans la pile de navigation */}
       <Stack.Screen name="StartingPage" component={StartingPage} />
       <Stack.Screen name="SignUp" component={SignUpScreen} />
@@ -35,6 +39,8 @@ const StackNavigator = () => {
       <Stack.Screen name="ForgetPassword" component={ForgetPasswordScreen} />
       <Stack.Screen name="VerificationCode" component={VerificationCodeScreen} />
       <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
+
+      <Stack.Screen name="Profile" component={ProfileScreen} />
 
       {/* Définition des autres routes dans la pile de navigation des categories */}
       <Stack.Screen name="Achat" component={AchatScreen} />
